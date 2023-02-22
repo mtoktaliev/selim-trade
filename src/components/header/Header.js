@@ -1,12 +1,10 @@
-import Navbar from "../navbar/Navbar";
-
+import React from "react";
+import { Container } from "react-bootstrap";
 
 const Header = () => {
     return (
         <header className="header">
-            <div className="container">
-                <Navbar />
-                <div>
+            <Container>
                 <h1>Современная и надёжная защита</h1>
                 <p className="header-text">Найдите идеальный вариант сами или предоставьте это нам</p>
                 <button className="button">
@@ -18,8 +16,7 @@ const Header = () => {
                         </svg>
                     </span>
                 Заказать ворота</button>
-            </div>
-            </div>
+            </Container>
         </header>
     );
 }

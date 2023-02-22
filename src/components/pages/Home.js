@@ -1,13 +1,11 @@
 import Header from "../header/Header";
+import Navigation from "../navbar/Navigation";
 
 const Home = () => {
     return ( 
         <div>
+            <Navigation />
             <Header />
-            <main className="container">
-                <h1>Test</h1>
-                <h2>test</h2>
-            </main>
         </div>
      );
 }

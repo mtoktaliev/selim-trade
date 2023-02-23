@@ -1,18 +1,31 @@
-import { Container } from "react-bootstrap";
+
 
 const News = () => {
     return (
         <div className="news">
-            <Container>
+            <div className="news_container">
                 <h2 className="news_title">Последние новости</h2>
                 <div className="news_inner">
                     <div className="news_item">
-                        <a href="/" className="news_link">
+                        <p className="news_text">
                         РЕАЛИЗОВАНА ВОЗМОЖНОСТЬ ПОДКЛЮЧЕНИЯ СИГНАЛЬНОЙ ЛАМПЫ К БЛОКАМ УПРАВЛЕНИЯ PCB-SH
-                        </a>
+                        </p>
+                    </div>
+                    <div className="news_item">
+                        <p className="news_text">
+                        РЕАЛИЗОВАНА ВОЗМОЖНОСТЬ ПОДКЛЮЧЕНИЯ СИГНАЛЬНОЙ ЛАМПЫ К БЛОКАМ УПРАВЛЕНИЯ PCB-SH
+                        </p>
+                    </div>
+                    <div className="news_item">
+                        <p className="news_text">
+                        РЕАЛИЗОВАНА ВОЗМОЖНОСТЬ ПОДКЛЮЧЕНИЯ СИГНАЛЬНОЙ ЛАМПЫ К БЛОКАМ УПРАВЛЕНИЯ PCB-SH
+                        </p>
                     </div>
                 </div>
-            </Container>
+                <div className="light_btn-container">
+                    <button className="light_btn">смотреть все</button>
+                </div>
+            </div>
         </div>
     );
 }

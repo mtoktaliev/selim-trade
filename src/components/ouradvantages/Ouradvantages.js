@@ -1,9 +1,9 @@
-import { Container } from "react-bootstrap";
+
 
 const Ouradvantages = () => {
     return (
         <div className="ouradvantages">
-            <Container>
+            <div className="container">
                 <h2 className="ouradvantages_title">Наши преимущества</h2>
                 <div className="ouradvantages_inner">
                     <div className="ouradvantages_items">
@@ -97,7 +97,7 @@ const Ouradvantages = () => {
                         </div>
                     </div>
                 </div>
-            </Container>
+            </div>
         </div>
     );
 }

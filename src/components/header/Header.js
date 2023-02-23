@@ -1,12 +1,11 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import Navigation from "../navbar/Navigation";
 
 const Header = () => {
     return (
         <header className="header">
             <Navigation />
-            <Container>
+            <div className="container">
                 <h1>Современная и надёжная защита</h1>
                 <p className="header-text">Найдите идеальный вариант сами или предоставьте это нам</p>
                 <button className="button">
@@ -18,7 +17,7 @@ const Header = () => {
                         </svg>
                     </span>
                 Заказать ворота</button>
-            </Container>
+            </div>
         </header>
     );
 }

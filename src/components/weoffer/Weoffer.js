@@ -1,4 +1,3 @@
-import { Container } from "react-bootstrap";
 import sectional from "./../../img/we-offer-sectional.jpg"
 import automation from "./../../img/we-offer-automation.jpg"
 import roll from "./../../img/we-offer-roll.jpg"
@@ -9,7 +8,7 @@ import folding from "./../../img/we-offer-folding.jpg"
 const Weoffer = () => {
     return (
         <div className="weoffer">
-            <Container>
+            <div className="container">
             <h2 className="weoffer_title">Мы предлагаем</h2>
                 <div className="weoffer_cards mansory">
                     <a href="/" className="weoffer_cards-link">
@@ -43,11 +42,11 @@ const Weoffer = () => {
                         </div>
                     </a>
                 </div>
-                <div className="weoffer_btn-container">
+                <div className="light_btn-container">
                     <button className="light_btn">смотреть все</button>
                 </div>
                
-            </Container>
+            </div>
         </div>
     );
 }

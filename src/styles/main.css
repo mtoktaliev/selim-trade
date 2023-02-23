@@ -5,6 +5,19 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.wrapper {
+	min-height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.container {
+    max-width: 1260px;
+	padding: 0 15px;
+	margin: 0 auto;
+	height: 100%;
+}
+
 h1 {
     font-family: 'Montserrat';
     font-style: normal;
@@ -27,7 +40,8 @@ h2 {
     background: linear-gradient(90.13deg, #105BFB 0.1%, #5061FF 134.04%);
     color: #fff;
     border-radius: 20px;
-
+    display: flex;
+    align-items: center;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 900;
@@ -62,47 +76,64 @@ h2 {
     transform: scale(1.01);
 }
 
+.light_btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .navigation {
     position: fixed;
+    width: 1200px;
     top: 30px;
-    /* display: flex; */
-    justify-content: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
     border-radius: 10px;
-    margin: 0 auto;
-    padding: 0 50px;
     z-index: 100;
+    padding: 3px 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 
 .nav_list {
-    margin: 0 auto;
+    display: flex;
+    margin: 0 25px;
 }
 
 .nav_link {
     white-space: nowrap;
-    text-align: right;
+    /* text-align: right; */
     font-family: 'Inter';
     font-weight: 500;
     font-size: 18px;
     line-height: 120%;
     text-transform: lowercase;
-    color: #FEFBFB;
+    margin: 0 15px;
+}
+
+.nav_link-active {
+    border-bottom: 1px solid #fff;
 }
 
 .nav_link:hover {
-    text-decoration: underline;
+    opacity: 0.5;
 }
 
 .nav_contacts {
-    color: #fff;
     white-space: nowrap;
     text-align: right;
+    cursor: pointer;
 }
 
 .nav_contacts:hover {
-    color: #fff;
-    opacity: 0.8;
+    opacity: 0.5;
 }
 
 .show {
@@ -113,7 +144,7 @@ h2 {
     background: url(./../img/header-bg.png) 100% 100% no-repeat;
     background-size: cover;
     background-position: center bottom;
-    min-height: 100vh;
+    min-height: 820px;
     z-index: -1;
     display: flex;
 	justify-content: center;
@@ -168,7 +199,6 @@ h2 {
     width: 100%;
     min-height: 800px;
 	margin-top: -50px;
-	position: relative;
 }
 
 .weoffer_title {
@@ -230,15 +260,9 @@ h2 {
     font-weight: 800;
     font-size: 31.6467px;
     line-height: 150%;
-    color: #F1F6FF;
     white-space: nowrap;
 }
 
-.weoffer_btn-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 /* ---------------------------- */
 .ouradvantages {
@@ -287,11 +311,51 @@ h2 {
 
 /* ---------------- */
 
+.news {
+    background: url(./../img/news-bg.jpg) 100% 100% no-repeat;
+    background-position-y: -200%;
+}
+
+.news_container {
+    padding: 0 35px;
+	margin: 0 auto;
+}
+
 .news_title {
     text-align: center;
+    margin-bottom: 35px;
 }
 
 .news_inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    color: #fff;
+    margin-bottom: 35px;
+}
+
+.news_item {
+    background: url(./../img/news-1.jpg) 100% 100% no-repeat;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-right: 25px;
+    display: flex;
+    align-items: center;
+    height: 300px;
+    width: 440px;
+}
+
+.news_item:hover {
+    cursor: pointer;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./../img/news-1.jpg) 100% 100% no-repeat;
+}
+
+.news_item:last-child {
+    margin-right: 0;
+}
+
+.news_text {
+    padding: 30px;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 150%;
 }

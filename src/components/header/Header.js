@@ -1,9 +1,11 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import Navigation from "../navbar/Navigation";
 
 const Header = () => {
     return (
         <header className="header">
+            <Navigation />
             <Container>
                 <h1>Современная и надёжная защита</h1>
                 <p className="header-text">Найдите идеальный вариант сами или предоставьте это нам</p>

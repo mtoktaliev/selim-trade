@@ -3,7 +3,7 @@ import logo from "./../../img/logo-selim-trade.png"
 
 const Navigation = () => {
     return (
-        <Container expand="md" className="navigation">
+        <Container className="navigation">
         <Navbar collapseOnSelect expand="lg" variant="dark" className="navigation" fixed="top">
             <Container>
             <Navbar.Brand href="/">
@@ -25,22 +25,6 @@ const Navigation = () => {
             </Container>
     </Navbar>
     </Container>
-        // <div className="container">
-        // <nav className="nav_container container">
-        //         <div className="nav_row">
-        //             <a href="/">
-        //                 <img src={logo} alt="logo" />
-        //             </a>
-        //             <ul className="nav_list">
-        //                 <li><a href="/">Главная</a></li>
-        //                 <li><a href="/">Услуги</a></li>
-        //                 <li><a href="/">Новости</a></li>
-        //                 <li><a href="/">Наши работы</a></li>
-        //             </ul>
-        //             <a href="tel:+996552570755">г. Бишкек<br/>+996 (552) 57 07 55</a>
-        //         </div>
-        // </nav>
-        // </div>
     );
 }
 

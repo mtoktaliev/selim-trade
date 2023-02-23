@@ -63,8 +63,9 @@ h2 {
 }
 
 .navigation {
+    position: fixed;
     top: 30px;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
@@ -243,7 +244,8 @@ h2 {
 .ouradvantages {
     background: url(./../img/our-advantages-bg.jpg) 100% 100% no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center bottom;
+    margin-top: -50px;
     width: 100%;
     min-height: 574px;
 }
@@ -251,6 +253,7 @@ h2 {
 .ouradvantages_title {
     text-align: center;
     margin-bottom: 25px;
+    padding-top: 150px;
 }
 
 .ouradvantages_inner {
@@ -280,4 +283,15 @@ h2 {
     line-height: 140%;
     text-align: center;
     color: #414141;
+}
+
+/* ---------------- */
+
+.news_title {
+    text-align: center;
+}
+
+.news_inner {
+    display: flex;
+    justify-content: space-between;
 }

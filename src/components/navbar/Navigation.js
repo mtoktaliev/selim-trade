@@ -20,7 +20,7 @@ const Navigation = () => {
                     <Nav.Link href="/news" className="nav_link">Новости</Nav.Link>
                     <Nav.Link href="/ourworks" className="nav_link">Наши работы</Nav.Link>
                 </Nav>
-                <Nav.Link href="/" className="nav_link">г. Бишкек<br/>+996 (552) 57 07 55</Nav.Link>
+                <Nav.Link href="/" className="nav_contacts">г. Бишкек<br/>+996 (552) 57 07 55</Nav.Link>
             </Navbar.Collapse>
             </Container>
     </Navbar>

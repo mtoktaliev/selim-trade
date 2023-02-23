@@ -20,7 +20,6 @@ h2 {
     font-weight: 700;
     font-size: 40px;
     line-height: 150%;
-    text-transform: uppercase;
 }
 
 .button {
@@ -35,10 +34,32 @@ h2 {
     font-size: 25px;
     line-height: 120%;
     text-transform: lowercase;
+    transition: all 0.5s;
+}
+
+.button:hover {
+    transform: scale(1.01);
 }
 
 .button span {
     margin-right: 25px;
+}
+
+.light_btn {
+    padding: 12px 30px;
+    border-radius: 18.0838px;
+    border: 1px solid #105BFB;
+    background-color: #fff;
+    font-weight: 400;
+    font-size: 22.6048px;
+    line-height: 120%;
+    text-transform: lowercase;
+    color: #414141;
+    transition: all 0.5s;
+}
+
+.light_btn:hover {
+    transform: scale(1.01);
 }
 
 .navigation {
@@ -50,6 +71,7 @@ h2 {
     border-radius: 10px;
     margin: 0 auto;
     padding: 0 50px;
+    z-index: 100;
 }
 
 .nav_list {
@@ -67,14 +89,23 @@ h2 {
     color: #FEFBFB;
 }
 
+.nav_link:hover {
+    text-decoration: underline;
+}
+
 .nav_contacts {
     color: #fff;
     white-space: nowrap;
+    text-align: right;
+}
+
+.nav_contacts:hover {
+    color: #fff;
+    opacity: 0.8;
 }
 
 .show {
     margin-bottom: 15px;
-    text-align: left;
 }
 
 .header {
@@ -82,7 +113,7 @@ h2 {
     background-size: cover;
     background-position: center bottom;
     min-height: 100vh;
-
+    z-index: -1;
     display: flex;
 	justify-content: center;
     align-items: center;
@@ -98,4 +129,155 @@ h2 {
     margin: 12px 0 40px;
 
     max-width: 469px;
+}
+
+.aboutus {
+    background: url(./../img/who-is-selim-trade-bg.jpg) 100% 100% no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    width: 100%;
+    min-height: 800px;
+	margin-top: -50px;
+	position: relative;
+    z-index: -2;
+}
+
+.aboutus_title {
+    padding-top: 238px;
+    margin-bottom: 20px;
+}
+
+.aboutus_text {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: justify;
+    padding: 10px 15px;
+    max-width: 533px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* ------------------------------ */
+.weoffer {
+    background: url(./../img/we-offer-bg.jpg) 100% 100% no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    width: 100%;
+    min-height: 800px;
+	margin-top: -50px;
+	position: relative;
+}
+
+.weoffer_title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+.mansory {
+    column-count: 3;
+}
+
+@media (max-width: 360px) {
+    .mansory {
+        column-count: 1;
+    }
+}
+
+@media (min-width: 361px) and (max-width: 768px) {
+    .mansory {
+        column-count: 2;
+    }
+}
+
+.weoffer_cards-link {
+    display: inline-block;
+    margin: 0 0 1.5em;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.5s;
+}
+
+.weoffer_cards-link:hover {
+    transform: scale(1.02);
+}
+
+.weoffer_img-box {
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+    width: 100%;
+    box-shadow: 0px 0px 22.6048px rgba(116, 116, 116, 0.13);
+    border-radius: 18.0838px;
+}
+
+.weoffer_img-box img {
+    object-fit: fill;
+}
+
+.weoffer_card-name {
+    position: absolute;
+    transform: translateY(-80px);
+    margin: 0 13px;
+    padding: 10px 13px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(1.80838px);
+    border-radius: 18.0838px;
+    font-weight: 800;
+    font-size: 31.6467px;
+    line-height: 150%;
+    color: #F1F6FF;
+    white-space: nowrap;
+}
+
+.weoffer_btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------------------------- */
+.ouradvantages {
+    background: url(./../img/our-advantages-bg.jpg) 100% 100% no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 574px;
+}
+
+.ouradvantages_title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.ouradvantages_inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ouradvantages_items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    padding: 10px 10px;
+    background: #FDFDFD;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.13);
+    border-radius: 10px;
+}
+
+.ouradvantages_items:last-child {
+    margin-right: 0;
+}
+
+.ouradvantages_text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    color: #414141;
 }

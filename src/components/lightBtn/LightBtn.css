@@ -1,0 +1,42 @@
+/* -------Light button--------- */
+
+.light_btn {
+    padding: 12px 30px;
+    border-radius: 18.0838px;
+    border: 1px solid #105BFB;
+    background-color: #fff;
+    font-weight: 400;
+    font-size: 22.6048px;
+    line-height: 120%;
+    text-transform: lowercase;
+    color: #414141;
+    transition: all 0.5s;
+}
+
+.light_btn:hover {
+    transform: scale(1.01);
+}
+
+@media (max-width: 992px) {
+
+    
+}
+
+@media (max-width: 768px) {
+
+    .light_btn {
+		padding: 12px 20px;
+		border-radius: 14px;
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 576px) {
+
+	.light_btn {
+		padding: 12px 15px;
+		border-radius: 10px;
+		font-size: 14px;
+	}
+    
+}

@@ -1,0 +1,40 @@
+.worksSlider {
+    text-align: center;
+}
+
+.worksSlider_container {
+    max-width: 1430px;
+    padding: 0 15px;
+	margin: 0 auto;
+}
+
+
+.worksSlider_item {
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 10px;
+    max-height: 360px;
+}
+
+.worksSlider_item img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 992px) {
+
+    
+}
+
+@media (max-width: 768px) {
+    
+
+    .worksSlider {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 576px) {
+
+    
+}

@@ -1,62 +1,29 @@
-import Slider from "react-slick";
+import { NavLink } from "react-router-dom";
+
 import H2 from "../h2/H2";
 import LightBtn from '../lightBtn/LightBtn';
 import './Weoffer.css'
 
 
-const Weoffer = () => {
+const Weoffer = ({categories = [], amount}) => {
 
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      };
+    const list = categories.filter((_, i) => i < amount);
 
     return (
-        <div className="weoffer">
+        <section className="weoffer">
             <div className="weoffer_container">
                 <H2 data="Мы предлагаем"/>
                     <div className="weoffer_inner">
-                        <div className="weoffer_item-one">
-                            <div className="weoffer_item-name">Секционные</div>
-                        </div>
-                        <div className="weoffer_item-two">
-                            <div className="weoffer_item-name">Автоматика</div>
-                        </div>
-                        <div className="weoffer_item-three">
-                            <div className="weoffer_item-name">Роль ворота</div>
-                        </div>
-                        <div className="weoffer_item-four">
-                            <div className="weoffer_item-name">Распашные</div>
-                        </div>
-                        <div className="weoffer_item-five">
-                            <div className="weoffer_item-name">Складные</div>
-                        </div>
+                        {list.map(({ id, name, image }) => (
+                            <NavLink to={`/categories/${id}`}><div className="weoffer_item" key={id} style={{backgroundImage: `url(${image})`}}>
+                                <p className="weoffer_item-name">{name}</p>
+                            </div></NavLink>
+                        ))}
                     </div>
             </div>
 
-            <Slider {...settings} className="slider">
-                <div className="weoffer_item-one">
-                    <div className="weoffer_item-name">Секционные</div>
-                </div>
-                <div className="weoffer_item-two">
-                    <div className="weoffer_item-name">Автоматика</div>
-                </div>
-                <div className="weoffer_item-three">
-                    <div className="weoffer_item-name">Роль ворота</div>
-                </div>
-                <div className="weoffer_item-four">
-                    <div className="weoffer_item-name">Распашные</div>
-                </div>
-                <div className="weoffer_item-five">
-                    <div className="weoffer_item-name">Складные</div>
-                </div>
-        </Slider>
-
         <LightBtn name="смотреть все" />
-        </div>
+        </section>
     );
 }
 

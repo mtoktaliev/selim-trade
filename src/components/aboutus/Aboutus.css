@@ -41,7 +41,7 @@
 @media (max-width: 992px) {
 
     .aboutus {
-        min-height: 70vh;
+        min-height: 60vh;
     }
 
     .aboutus_title {
@@ -75,7 +75,7 @@
 @media (max-width: 576px) {
 
     .aboutus {
-        min-height: 60vh;
+        min-height: 50vh;
         top: -30px;
     }
     

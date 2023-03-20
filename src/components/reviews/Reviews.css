@@ -3,6 +3,7 @@
 	padding: 0 15px;
 	margin: 0 auto;
 	height: 100%;
+    text-align: center;
 }
 
 .reviews_item {
@@ -12,6 +13,7 @@
     padding: 15px;
     border-radius: 10px;
     color: #414141;
+    text-align: left;
 }
 
 .reviews_item-top {

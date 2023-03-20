@@ -11,6 +11,7 @@
     font-size: 25px;
     text-transform: lowercase;
     transition: all 0.3s;
+    white-space: nowrap;
 }
 
 .btn:hover {

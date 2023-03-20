@@ -1,25 +1,31 @@
+import { Link } from "react-router-dom";
+
 import H2 from "../h2/H2";
 import './News.css'
-import {newsData} from './data'
 import LightBtn from "../lightBtn/LightBtn";
 
-const News = () => {
+const News = ({news =[], amount}) => {
+
+    const list = news.filter((_, i) => i < amount);
+
     return ( 
-        <div className="news">
+        <section className="news">
             <div className="news_container">
                 <H2 data='Последние новости'/>
                     <div className="news_inner">
-                        {newsData.map(item => (
-                            <div className="news_item" style={{backgroundImage: `url(${"./img/" + item.img}`}}>
-                                <div className="news_item-title">{item.title}</div>
-                                <div className="news_item-desc">{item.desc}</div>
+                        {list.map(({ id, images, title, description }) => (
+ /* новости */                  <Link to={`/products/${id}`} key={id}>
+                                <div className="news_item" style={{ backgroundImage: `url(${images[0]})`}}>
+                                <div className="news_item-title">{title}</div>
+                                <div className="news_item-desc">{description}</div>
                                 <button className="news_item-btn">УЗНАТЬ БОЛЬШЕ</button>
-                            </div>
+                                </div>
+                            </Link>
                         ))}
                     </div>
                     <LightBtn name='ВСЕ НОВОСТИ' />
             </div>
-        </div>
+        </section>
      );
 }
  

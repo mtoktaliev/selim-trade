@@ -2,10 +2,17 @@ import { Link } from "react-router-dom";
 
 import './AllNews.css'
 import LightBtn from "../lightBtn/LightBtn";
+import { useState } from "react";
 
-const AllNews = ({news =[], amount}) => {
+const AllNews = ({news}) => {
 
-    const list = news.filter((_, i) => i < amount);
+    const [noOfElement, setNoOfElement] = useState(9);
+
+    const loadMore = () => {
+        setNoOfElement(noOfElement + 6)
+    }
+
+    const slice = news.slice(0, noOfElement)
 
     return ( 
         <section className="allNews">
@@ -15,8 +22,8 @@ const AllNews = ({news =[], amount}) => {
                     <div className="allNews_desc">К вашему вниманию Здесь мы собрали все актуальные новости нашей компании</div>
                 </div>
                 <div className="allNews_inner">
-                    {list.map(({ id, images, title, description }) => (
-/* новости */                  <Link to={`/products/${id}`} key={id}>
+                    {slice.map(({ id, images, title, description }) => (
+/* новости */               <Link to={`/products/${id}`} key={id}>
                             <div className="allNews_item" style={{ backgroundImage: `url(${images[0]})`}}>
                             <div className="allNews_item-title">{title}</div>
                             <div className="allNews_item-desc">{description}</div>
@@ -25,7 +32,7 @@ const AllNews = ({news =[], amount}) => {
                         </Link>
                     ))}
                 </div>
-                <LightBtn name='загрузить ещё' />
+                <LightBtn name='загрузить ещё' click={() => loadMore()} />
             </div>
         </section>
      );

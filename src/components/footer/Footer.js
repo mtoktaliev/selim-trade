@@ -75,7 +75,7 @@ class Footer extends Component {
                             +996 (772) 32 76 76
                         </div>
                     </div>
-                    <div className="footer_map">
+                    <div className="footer_map" id='map'>
                     <iframe 
                     title={'1'}
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d434.82895671787355!2d74.58702468325248!3d42.848166963734386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389ec9d9ff535571%3A0x8bff3ddc6fe576c1!2zMjIg0YPQuy4g0JDQudC90LgsINCR0LjRiNC60LXQuiA3MjAwNDQ!5e0!3m2!1sru!2skg!4v1679291456104!5m2!1sru!2skg" 

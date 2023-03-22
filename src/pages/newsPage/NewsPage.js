@@ -5,7 +5,7 @@ const NewsPage = () => {
     const { news } = useSelector((state) => state);
     return (
         <div>
-            <AllNews news={news.list} amount={12} />
+            <AllNews news={news.list} />
         </div>
     );
 }

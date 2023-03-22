@@ -16,7 +16,7 @@ const Home = () => {
         <>
             <Header />
             <Aboutus />
-            <Weoffer categories={categories.list} amount={6}/>
+            <Weoffer categories={categories.list} amount={5}/>
             <Advantages />
             <News news={news.list} amount={3}/>
             <WorksSlider />

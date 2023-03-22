@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
+import { ROUTES } from '../../utils/Routes'
 import H2 from "../h2/H2";
 import './News.css'
 import LightBtn from "../lightBtn/LightBtn";
@@ -23,7 +25,7 @@ const News = ({news =[], amount}) => {
                             </Link>
                         ))}
                     </div>
-                    <LightBtn name='ВСЕ НОВОСТИ' />
+                    <NavLink to={ROUTES.NEWSPAGE}><LightBtn name='ВСЕ НОВОСТИ' /></NavLink>
             </div>
         </section>
      );

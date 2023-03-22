@@ -8,7 +8,7 @@ const Forms = () => {
         <section className='forms'>
             <div className="forms_container">
                 <H2 data='Остались вопросы?' />
-                <form className='forms_inner'>
+                <form className='forms_inner' id="forms">
                     <label>
                         <div className='form_items'>
                             <input type="text" name='name' placeholder='ИМЯ' />

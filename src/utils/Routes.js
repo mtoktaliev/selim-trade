@@ -6,4 +6,5 @@ export const ROUTES = {
     CATEGORIES: '/categories/:id',
     NEWS: '/products/:id',
     WORKSSLIDER: '/categories/:id',
+    WORKSGALLERY: '/products/:id',
 }

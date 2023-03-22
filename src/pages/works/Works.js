@@ -1,19 +1,16 @@
-import React, { Component } from 'react';
+import { useSelector } from 'react-redux';
 
-import Aboutus from '../../components/aboutus/Aboutus';
-import Reviews from '../../components/reviews/Reviews';
-import Weoffer from '../../components/weoffer/Weoffer';
+import WorksGallery from '../../components/worksGallery/WorksGallery';
 
-class Works extends Component {
-    render() {
-        return (
-            <div>
-                <Weoffer />
-                <Aboutus />
-                <Reviews />
-            </div>
-        );
-    }
+const Works = () => {
+
+    const { worksGallery } = useSelector((state) => state);
+
+    return (
+        <div>
+            <WorksGallery worksGallery={worksGallery.list} amount={20} />
+        </div>
+    );
 }
 
 export default Works;

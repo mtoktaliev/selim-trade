@@ -1,19 +1,16 @@
-import React, { Component } from 'react';
+import { useSelector } from 'react-redux';
 
-import Advantages from '../../components/advantages/Advantages';
-import News from '../../components/news/News';
-import Reviews from '../../components/reviews/Reviews';
+import ServicesCategory from '../../components/servicesCategory/ServicesCategory';
 
-class Services extends Component {
-    render() {
-        return (
-            <div>
-                <Advantages />
-                <News />
-                <Reviews />
-            </div>
-        );
-    }
+const Services = () => {
+
+    const { categories } = useSelector((state) => state);
+
+    return (
+        <div>
+            <ServicesCategory categories={categories.list} amount={10} />
+        </div>
+    );
 }
 
 export default Services;

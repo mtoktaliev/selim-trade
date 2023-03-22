@@ -10,13 +10,13 @@ class Header extends Component {
     render() {
         const img = <img src={order} alt="order-icon"></img>;
         return (
-            <div className="header">
+            <section className="header">
                 <div className='header_container'>
                     <h1 className='header_title'>Современная и надёжная защита</h1>
                     <div className='header_subtitle'>Найдите идеальный вариант сами или предоставьте это нам</div>
-                    <Link to={ROUTES.HOME}><Btn icon={img} name="Заказать ворота"/></Link>
+                    <Link to={ROUTES.NEWSPAGE}><Btn icon={img} name="Заказать ворота"/></Link>
                 </div>
-            </div>
+            </section>
         );
     }
 }

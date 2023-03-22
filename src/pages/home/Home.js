@@ -1,7 +1,6 @@
 import { useSelector } from 'react-redux';
 import Aboutus from '../../components/aboutus/Aboutus';
 import Advantages from '../../components/advantages/Advantages';
-import Forms from '../../components/forms/Forms';
 import Header from '../../components/header/Header';
 import News from '../../components/news/News';
 import Reviews from '../../components/reviews/Reviews';
@@ -23,7 +22,6 @@ const Home = () => {
             <WorksSlider />
             <Service />
             <Reviews />
-            <Forms />
         </>
     );
 }

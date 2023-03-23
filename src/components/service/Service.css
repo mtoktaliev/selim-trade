@@ -95,6 +95,12 @@
 
 @media (max-width: 576px) {
 
+    .service {
+        background: url(../../assets/img/service-bg.png) 100% 100% no-repeat;
+        background-position: left bottom;
+        padding: 100px 0;
+    }
+
     .service_container {
         padding: 0;
     }
@@ -112,7 +118,7 @@
     }
 
 	.service_item {
-        max-width: 350px;
+        min-width: 200px;
         padding: 10px;
         height: 140px;
         cursor: pointer;

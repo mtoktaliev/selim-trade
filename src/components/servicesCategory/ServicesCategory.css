@@ -1,37 +1,8 @@
-.services {
-    
-}
-
 .services_container {
-    max-width: 1390px;
+    max-width: 1270px;
 	padding: 0 15px;
 	margin: 0 auto;
 	height: 100%;
-}
-
-.services_content {
-    margin: 170px 0 120px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.services_title {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 70px;
-    line-height: 110%;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
-
-.services_desc {
-    max-width: 650px;
-    font-weight: 300;
-    font-size: 19px;
-    line-height: 140%;
-    text-align: justify;
 }
 
 .services_inner {

@@ -1,4 +1,5 @@
 
+import PagesHeader from '../pagesHeader/PagesHeader';
 import './WorksGallery.css'
 
 const WorksGallery = ({worksGallery =[], amount}) => {
@@ -8,10 +9,7 @@ const WorksGallery = ({worksGallery =[], amount}) => {
     return ( 
         <section className="worksGallery">
             <div className="worksGallery_container">
-                <div className="worksGallery_content">
-                    <h1 className="worksGallery_title">Наши работы</h1>
-                    <div className="worksGallery_desc">Здесь мы собрали наши лучшие проекты, чтобы вы могли вдохновиться идеями для собственного проекта. Вы найдёте проект по душе и нраву, который захотите воплотить в жизнь.</div>
-                </div>
+                <PagesHeader title='Наши работы' desc='Здесь мы собрали наши лучшие проекты, чтобы вы могли вдохновиться идеями для собственного проекта. Вы найдёте проект по душе и нраву, который захотите воплотить в жизнь.' />
                 <div className="worksGallery_inner">
                     {list.map(({id, title, images}) => (
                         <div className="worksGallery_img">

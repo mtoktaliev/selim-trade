@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import './AllNews.css'
 import LightBtn from "../lightBtn/LightBtn";
 import { useState } from "react";
+import PagesHeader from "../pagesHeader/PagesHeader";
 
 const AllNews = ({news}) => {
 
@@ -17,10 +18,7 @@ const AllNews = ({news}) => {
     return ( 
         <section className="allNews">
             <div className="allNews_container">
-                <div className="allNews_content">
-                    <h1 className="allNews_title">Новости компании</h1>
-                    <div className="allNews_desc">К вашему вниманию Здесь мы собрали все актуальные новости нашей компании</div>
-                </div>
+                <PagesHeader title='Новости компании' desc='К вашему вниманию Здесь мы собрали все актуальные новости нашей компании' />
                 <div className="allNews_inner">
                     {slice.map(({ id, images, title, description }) => (
 /* новости */               <Link to={`/products/${id}`} key={id}>

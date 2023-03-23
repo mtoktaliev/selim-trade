@@ -41,7 +41,7 @@ const WorksSlider = () => {
             <H2 data="Наши работы" />
             <div className="worksSlider_container">
             
-            <Carousel responsive={responsive} infinite={true}>
+            <Carousel responsive={responsive} infinite={true} autoPlay={true} autoPlaySpeed={3000} transitionDuration={500}>
                 {list.map(({id, name, image}) => (
                     <NavLink to={`/categories/${id}`}>
                         <div className='worksSlider_item'>

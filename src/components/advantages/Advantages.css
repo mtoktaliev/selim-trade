@@ -9,7 +9,6 @@
     max-width: 1270px;
 	padding: 0 15px;
 	margin: 0 auto;
-	height: 100%;
     text-align: center;
 }
 
@@ -92,16 +91,8 @@
 
 @media (max-width: 576px) {
 
-    .advantages {
-        /* padding: 70px 0; */
-    }
-
     .advantages_container {
-        max-width: 1330px;
         padding: 0;
-        margin: 0 auto;
-        height: 100%;
-        text-align: center;
     }
 
     .advantages_inner {

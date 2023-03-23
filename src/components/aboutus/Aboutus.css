@@ -54,7 +54,7 @@
 @media (max-width: 768px) {
 
     .aboutus {
-        min-height: 50vh;
+        min-height: 60vh;
     }
     
     .aboutus_title {
@@ -73,10 +73,6 @@
 
 @media (max-width: 576px) {
 
-    .aboutus {
-        min-height: 40vh;
-        top: -40px;
-    }
     
     .aboutus_title {
         padding-top: 120px;

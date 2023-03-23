@@ -1,15 +1,13 @@
 .service {
     background: url(../../assets/img/service-bg.png) 100% 100% no-repeat;
-    height: 450px;
     background-position: left top;
-    min-width: 100%;
+    padding: 100px 0;
 }
 
 .service_container {
-    max-width: 1390px;
+    max-width: 1270px;
 	padding: 0 15px;
-	margin: 130px auto;
-	height: 100%;
+	margin: 0 auto;
     text-align: center;
 }
 
@@ -56,9 +54,9 @@
 @media (max-width: 992px) {
 
     .service {
-        padding: 120px 0;
+        padding: 70px 0;
     }
-
+    
     .service_item {
         height: 170px;
     }
@@ -73,7 +71,7 @@
 @media (max-width: 768px) {
 
     .service {
-        padding: 100px 0;
+        padding: 50px 0;
     }
 
     .service_inner {
@@ -92,7 +90,7 @@
 @media (max-width: 576px) {
 
     .service {
-        padding: 50px 0;
+        /* padding: 50px 0; */
     }
 
     .service_inner {
@@ -119,7 +117,7 @@
     }
 
 	.service_item {
-        min-width: 220px;
+        max-width: 350px;
         padding: 10px;
         height: 140px;
         cursor: pointer;
@@ -132,3 +130,4 @@
     }
 
 }
+

@@ -36,6 +36,7 @@
 @media (max-width: 992px) {
 
     .header_title {
+        max-width: 800px;
         font-size: 50px;
         margin-bottom: 10px;
     }
@@ -50,18 +51,19 @@
 @media (max-width: 768px) {
 
     .header_title {
-        font-size: 50px;
+        max-width: 650px;
+        font-size: 40px;
     }
 }
 
 @media (max-width: 576px) {
 
     .header {
-        min-height: 450px;
+        min-height: 90vh;
     }
 
     .header_title {
-        font-size: 25px;
+        font-size: 30px;
     }
 
     .header_subtitle {

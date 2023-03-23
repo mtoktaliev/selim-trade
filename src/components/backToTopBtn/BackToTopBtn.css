@@ -1,7 +1,7 @@
 .scrollBtn {
     position: fixed;
     right: 20px;
-    bottom: 350px;
+    bottom: 150px;
     height: 70px;
     width: 70px;
     background-color: #5061FF;
@@ -34,5 +34,40 @@
     } 
     to {
         transform: translateY(-2px);
+    }
+}
+
+@media (max-width: 992px) {
+
+    .scrollBtn {
+        bottom: 30px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+
+    .scrollBtn {
+        bottom: 30px;
+        height: 60px;
+        width: 60px;
+    }
+    
+    .scrollBtn svg {
+        height: 30px;
+    }
+    
+}
+
+@media (max-width: 576px) {
+
+    .scrollBtn {
+        bottom: 20px;
+        height: 50px;
+        width: 50px;
+    }
+    
+    .scrollBtn svg {
+        height: 28px;
     }
 }

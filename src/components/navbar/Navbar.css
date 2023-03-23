@@ -108,6 +108,10 @@
         transform: translateX(200%);
     }
 
+    .contacts {
+        margin-left: 0;
+    }
+
     .nav_list.open {
         transform: translateX(0);
     }

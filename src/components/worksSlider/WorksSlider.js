@@ -28,7 +28,7 @@ const WorksSlider = () => {
         },
         tablet: {
           breakpoint: { max: 768, min: 576 },
-          items: 2
+          items: 1
         },
         mobile: {
           breakpoint: { max: 576, min: 0 },

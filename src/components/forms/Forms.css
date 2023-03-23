@@ -2,7 +2,8 @@
     /* background: url(./../../assets/img/header-bg.png) 100% 100% no-repeat;
     background-size: cover;
     background-position: center bottom; */
-    margin-top: 100px;
+    /* margin-top: 100px; */
+    padding-top: 100px;
 }
 
 .forms_container {
@@ -38,4 +39,23 @@
     border-radius: 20px;
     font-size: 20px;
     text-transform: lowercase;
+}
+
+@media (max-width: 992px) {
+
+    .forms {
+        padding-top: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .forms {
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    
 }

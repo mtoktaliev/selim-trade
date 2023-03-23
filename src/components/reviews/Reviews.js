@@ -11,7 +11,7 @@ class Reviews extends Component {
         superLargeDesktop: {
           // the naming can be any, depends on you.
           breakpoint: { max: 5000, min: 1600 },
-          items: 4
+          items: 3
         },
         LargeDesktop: {
           // the naming can be any, depends on you.
@@ -33,6 +33,7 @@ class Reviews extends Component {
       };
       
         return (
+          <section className='reviews'>
           <div className='reviews_container'>
             <H2 data='Отзывы наших клиентов' />
             <Carousel responsive={responsive} infinite={true} autoPlay={this.props.deviceType !== "mobile" ? true : false} autoPlaySpeed={3000} transitionDuration={500}>
@@ -52,6 +53,7 @@ class Reviews extends Component {
                 ))}
             </Carousel>
             </div>
+            </section>
         );
     }
 }

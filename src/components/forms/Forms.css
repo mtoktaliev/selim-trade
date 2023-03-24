@@ -41,10 +41,22 @@
     text-transform: lowercase;
 }
 
+.mobile_holder {
+    display: none;
+}
+
 @media (max-width: 992px) {
 
     .forms {
         padding-top: 70px;
+    }
+
+    .form_items {
+        gap: 20px;
+    }
+
+    .forms textarea {
+        margin-top: 20px;
     }
 }
 
@@ -53,9 +65,40 @@
     .forms {
         padding-top: 50px;
     }
+
+    .form_items {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .mobile_holder {
+        display: block;
+    }
+
+    .forms textarea {
+        margin-top: 0;
+    }
+
+    .desktop_holder {
+        display: none;
+    }
 }
 
 @media (max-width: 576px) {
 
-    
+    .form_items {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .forms input {
+        font-size: 14px;
+    }
+
+    .forms textarea {
+        height: 150px;
+        font-size: 14px;
+        margin-top: 0;
+    }
 }

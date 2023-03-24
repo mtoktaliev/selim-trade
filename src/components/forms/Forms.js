@@ -13,9 +13,10 @@ const Forms = () => {
                         <div className='form_items'>
                             <input type="text" name='name' placeholder='ИМЯ' />
                             <input type="tel" name='phone' placeholder='телефон' />
+                            <textarea placeholder='СООБЩЕНИЕ' className='mobile_holder'></textarea>
                             <Btn name='Оставить заявку' />
                         </div>
-                        <textarea placeholder='СООБЩЕНИЕ'></textarea>
+                        <textarea placeholder='СООБЩЕНИЕ' className='desktop_holder'></textarea>
                     </label>
                 </form>
             </div>

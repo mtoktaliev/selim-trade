@@ -11,6 +11,7 @@ class Footer extends Component {
             <footer className='footer'>
                 <div className="footer_container">
                 <div className="footer_inner">
+                    <div className='footer_menu-links'>
                     <div className="footer_links">
                         <NavLink to={ROUTES.HOME} className='footer_link'><img src={logo} alt='logotype' /></NavLink>
                         <div className="footer_links-social">
@@ -62,6 +63,8 @@ class Footer extends Component {
                         <li><NavLink to='/' className='footer_link'>отзывы</NavLink></li>
                         <li><NavLink to={ROUTES.NEWSPAGE} className='footer_link'>Новости</NavLink></li>
                     </ul>
+                    </div>
+                    <div className="footer_contacts-map">
                     <div className="footer_info">
                         <div className='footer_schedule'>
                             РЕЖИМ РАБОТЫ<br/>
@@ -87,6 +90,7 @@ class Footer extends Component {
                     referrerpolicy="no-referrer-when-downgrade"
                     />
                     </div>
+                </div>
                 </div>
                 </div>
                 <div className="footer_bottom">

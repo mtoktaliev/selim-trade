@@ -19,6 +19,16 @@
     justify-content: space-between;
 }
 
+.footer_menu-links {
+    display: flex;
+    gap: 50px;
+}
+
+.footer_contacts-map {
+    display: flex;
+    gap: 40px;
+}
+
 .footer_links {
     display: flex;
     flex-direction: column;
@@ -69,4 +79,122 @@
     font-size: 14px;
     color: #F1F6FF;
     text-align: center;
+}
+
+@media (max-width: 1200px) {
+
+    .footer_map iframe {
+        width: 430px;
+    }
+    
+}
+
+@media (max-width: 992px) {
+
+    .footer {
+        font-size: 16px;
+    }
+
+    .footer_links-social p {
+        font-size: 14px;
+    }
+
+    .footer_menu-links {
+        gap: 30px;
+    }
+
+    .footer_contacts-map {
+        gap: 30px;
+    }
+
+    .footer_map iframe {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .footer_inner {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .footer_menu-links {
+        justify-content: center;
+    }
+
+    .footer_contacts-map {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        gap: 15px;
+    }
+
+    .footer_links img {
+        width: 80px;
+    }
+
+    .footer_menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .footer_info {
+        gap: 15px;
+    }
+    
+}
+
+@media (max-width: 576px) {
+
+    .footer_inner {
+        font-size: 12px;
+    }
+
+    .footer_menu-links {
+        flex-wrap: wrap;
+        font-size: 14px;
+    }
+
+    .footer_menu-links {
+        flex-direction: column-reverse;
+    }
+
+    .footer_links {
+        justify-content: center;
+    }
+
+    .footer_links-social {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .footer_links-social svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .footer_links-social a {
+        margin: 0;
+    }
+
+    .footer_links-social p {
+        font-size: 12px;
+    }
+
+    .footer_map iframe {
+        width: 180px;
+        height: 150px;
+    }
+   
 }

@@ -196,5 +196,9 @@
         width: 180px;
         height: 150px;
     }
+
+    .footer_bottom {
+        font-size: 10px;
+    }
    
 }

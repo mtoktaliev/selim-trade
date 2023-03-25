@@ -16,13 +16,13 @@ const News = ({news =[], amount}) => {
                 <H2 data='Последние новости'/>
                     <div className="news_inner">
                         {list.map(({ id, images, title, description }) => (
- /* новости */                  <Link to={`/products/${id}`} key={id}>
-                                <div className="news_item" style={{ backgroundImage: `url(${images[0]})`}}>
-                                <div className="news_item-title">{title}</div>
-                                <div className="news_item-desc">{description}</div>
-                                <button className="news_item-btn">УЗНАТЬ БОЛЬШЕ</button>
-                                </div>
+                            <div className="news_item" style={{ backgroundImage: `url(${images[0]})`}}>
+                            <div className="news_item-title">{title}</div>
+                            <div className="news_item-desc">{description}</div>
+                            <Link to={`/news`} key={id} className="news_item-btn">
+                                УЗНАТЬ БОЛЬШЕ
                             </Link>
+                            </div>
                         ))}
                     </div>
                     <NavLink to={ROUTES.NEWSPAGE}><LightBtn name='ВСЕ НОВОСТИ' /></NavLink>

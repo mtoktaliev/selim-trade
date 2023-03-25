@@ -92,11 +92,12 @@
     border-radius: 30px;
     max-width: 210px;
     margin-top: 10px;
-    z-index: 3;
+    z-index: 10;
 }
 
 .news_item-btn:hover {
     color: #fff;
+    background: #5061FF;
 }
 
 .news_item:hover .news_item-btn {

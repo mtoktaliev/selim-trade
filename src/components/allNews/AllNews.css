@@ -90,6 +90,7 @@
 
 .allNews_item-btn:hover {
     color: #fff;
+    background: #5061FF;
 }
 
 .allNews_item:hover .allNews_item-btn {

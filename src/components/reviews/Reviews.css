@@ -24,15 +24,18 @@
 }
 
 .reviews_item-avatar {
-    min-width: 70px; 
+    width: 70px; 
+    height: 70px;
+    border-radius: 50%;
     position: absolute;
     overflow: hidden;
     transform: translateY(-30%);
 }
 
 .reviews_item-avatar img {
-    border-radius: 50%;
-    width: 100%;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
 }
 
 .reviews_item-title {
@@ -69,10 +72,37 @@
 
     .reviews {
         padding: 50px 0;
-    }    
+    } 
+
+    .reviews_author {
+        font-size: 15px;
+    }
+
+    .reviews_product {
+        font-size: 14px; 
+}
+
+    .reviews_desc {
+        font-size: 15px;
+    }   
 }
 
 @media (max-width: 576px) {
 
-    
+    .reviews_item-avatar {
+        width: 60px; 
+        height: 60px;
+    }
+
+    .reviews_author {
+        font-size: 14px;
+    }
+
+    .reviews_product {
+        font-size: 13px; 
+}
+
+    .reviews_desc {
+        font-size: 14px;
+    }
 }

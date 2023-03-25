@@ -36,7 +36,14 @@ class Reviews extends Component {
           <section className='reviews'>
           <div className='reviews_container'>
             <H2 data='Отзывы наших клиентов' />
-            <Carousel responsive={responsive} infinite={true} autoPlay={this.props.deviceType !== "mobile" ? true : false} autoPlaySpeed={3000} transitionDuration={500}>
+            <Carousel
+            responsive={responsive} 
+            infinite={true} 
+            // autoPlay={this.props.deviceType !== "mobile" ? true : false} 
+            autoPlaySpeed={3000} 
+            transitionDuration={500}
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+            >
                 {reviewsData.map(item => (
                     <div className='reviews_item'>
                         <div className='reviews_item-top'>

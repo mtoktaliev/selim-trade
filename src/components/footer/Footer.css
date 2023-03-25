@@ -143,7 +143,7 @@
     .footer_menu {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;
         gap: 15px;
     }
 
@@ -164,19 +164,20 @@
         font-size: 14px;
     }
 
+    .footer_menu li {
+        margin-bottom: 0;
+    }
+
     .footer_menu-links {
         flex-direction: column-reverse;
     }
 
     .footer_links {
-        justify-content: center;
+        justify-content: space-around;
     }
 
-    .footer_links-social {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
+    .footer_links-social svg {
+        margin-right: 10px;
     }
 
     .footer_links-social svg {
@@ -198,7 +199,7 @@
     }
 
     .footer_bottom {
-        font-size: 10px;
+        font-size: 9px;
     }
    
 }

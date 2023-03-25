@@ -10,7 +10,6 @@
     max-width: 1270px;
 	padding: 0 15px;
 	margin: 0 auto;
-	height: 100%;
 }
 
 .weoffer_inner {
@@ -23,8 +22,6 @@
 }
 
 .weoffer_item {
-    width: 100%;
-    height: 100%;
     background-size: cover;
     background-position: center;
     cursor: pointer;
@@ -111,6 +108,7 @@
     }
 
     .weoffer_item {
+        border-radius: 10px;
         min-width: 250px;
         height: 180px;
     }

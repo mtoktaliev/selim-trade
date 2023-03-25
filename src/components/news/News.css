@@ -31,6 +31,8 @@
     position: relative;
     overflow: hidden;
     background: #5061FF;
+    background-size: cover;
+    background-position: center;
 }
 
 .news_item:after { 
@@ -195,7 +197,6 @@
     .news {
         background-position: right top;
         background-size: contain;
-        /* height: 350px; */
     }
 
     .news_inner {
@@ -203,8 +204,9 @@
     }
 
     .news_item {
-        width: 280px;
-        height: 180px;
+        border-radius: 10px;
+        width: 250px;
+        height: 160px;
     }
 
     .news_item-title {

@@ -40,5 +40,12 @@
 
 @media (max-width: 576px) {
 
+    .worksSlider_container {
+        max-width: 1290px;
+        padding: 0;
+        margin: 0 auto;
+        text-align: center;
+    }
+
     
 }

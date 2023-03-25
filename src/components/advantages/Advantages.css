@@ -108,9 +108,9 @@
     }
 
 	.advantages_item {
-        min-width: 220px;
+        min-width: 225px;
         padding: 10px;
-        height: 140px;
+        height: 125px;
         cursor: pointer;
         margin: 10px 0;
     }

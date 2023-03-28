@@ -1,12 +1,12 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import React, { Component } from 'react';
-import {reviewsData} from "./data";
 import styles from './Reviews.module.css'
 import H2 from '../h2/H2';
 
-class Reviews extends Component {
-    render() {
+const Reviews = ({review = [], amount}) => {
+
+  const list = review.filter((_, i) => i < amount);
+    
       const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
@@ -44,25 +44,24 @@ class Reviews extends Component {
             transitionDuration={500}
             removeArrowOnDeviceType={["tablet", "mobile"]}
             >
-                {reviewsData.map(item => (
+                {list.map(item => (
                     <div className={styles.reviews_item}>
                         <div className={styles.reviews_item_top}>
                             <div className={styles.reviews_item_avatar}>
-                                <img src={"./img/" + item.img} alt="author" />
+                                <img src={item.link} alt="author" />
                             </div>
                             <div className={styles.reviews_item_title}>
-                                <h3 className={styles.reviews_author}>{item.author}</h3>
-                                <h4 className={styles.reviews_product}>{item.product}</h4>
+                                <h3 className={styles.reviews_author}>{item.name}</h3>
+                                <h4 className={styles.reviews_product}>{item.gatesType.type}</h4>
                             </div>
                         </div> 
-                        <p className={styles.reviews_desc}>{item.desc}</p>
+                        <p className={styles.reviews_desc}>{item.text}</p>
                     </div>
                 ))}
             </Carousel>
             </div>
             </section>
         );
-    }
 }
 
 export default Reviews;

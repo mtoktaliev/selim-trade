@@ -15,11 +15,11 @@ const News = ({news =[], amount}) => {
             <div className={styles.news_container}>
                 <H2 data='Последние новости'/>
                     <div className={styles.news_inner}>
-                        {list.map(({ id, images, title, description }) => (
-                            <div className={styles.news_item} style={{ backgroundImage: `url(${images[0]})`}}>
-                            <div className={styles.news_item_title}>{title}</div>
-                            <div className={styles.news_item_desc}>{description}</div>
-                            <Link to={`/news`} key={id} className={styles.news_item_btn}>
+                        {list.map(({ id, main_photo, header, description }) => (
+                            <div className={styles.news_item} style={{ backgroundImage: `url(${main_photo})`}}>
+                            <div className={styles.news_item_title}>{header}</div>
+                            <div className={styles.news_item_desc}>{description.slice(0, 100)} . . .</div>
+                            <Link to={`/news/${id}`} key={id} className={styles.news_item_btn}>
                                 УЗНАТЬ БОЛЬШЕ
                             </Link>
                             </div>

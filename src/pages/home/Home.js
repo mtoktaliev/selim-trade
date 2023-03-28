@@ -5,23 +5,23 @@ import Header from '../../components/header/Header';
 import News from '../../components/news/News';
 import Reviews from '../../components/reviews/Reviews';
 import Service from '../../components/service/Service';
-import Weoffer from '../../components/weoffer/Weoffer';
+import GatesTypes from '../../components/gatesTypes/GatesTypes';
 import WorksSlider from '../../components/worksSlider/WorksSlider';
 
 const Home = () => {
 
-    const { news, categories } = useSelector((state) => state);
+    const { news, gatesTypes, review } = useSelector((state) => state);
 
     return (
         <>
             <Header />
             <Aboutus />
-            <Weoffer categories={categories.list} amount={5}/>
+            <GatesTypes gatesTypes={gatesTypes.list} amount={6}/>
             <Advantages />
             <News news={news.list} amount={3}/>
             <WorksSlider />
             <Service />
-            <Reviews />
+            <Reviews review={review.list} amount={10}/>
         </>
     );
 }

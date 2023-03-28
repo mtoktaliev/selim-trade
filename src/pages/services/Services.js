@@ -4,11 +4,11 @@ import ServicesCategory from '../../components/servicesCategory/ServicesCategory
 
 const Services = () => {
 
-    const { categories } = useSelector((state) => state);
+    const { gatesTypes } = useSelector((state) => state);
 
     return (
         <div>
-            <ServicesCategory categories={categories.list} amount={10} />
+            <ServicesCategory gatesTypes={gatesTypes.list} amount={10} />
         </div>
     );
 }

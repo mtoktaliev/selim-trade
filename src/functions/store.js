@@ -1,17 +1,18 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import categoriesSlice from "./categories/categoriesSlice";
+import gatesTypesSlice from "./gatesTypes/gatesTypesSlice";
 import newsSlice from "./news/newsSlice";
 import worksGallerySlice from "./worksGallery/worksGallerySlice";
 import worksSliderSlice from "./worksSlider/worksSliderSlice";
-
+import reviewSlice from "./review/reviewSlice";
 
 export const store = configureStore({
     reducer: {
-        categories: categoriesSlice,
+        gatesTypes: gatesTypesSlice,
         news: newsSlice,
         worksSlider: worksSliderSlice,
         worksGallery: worksGallerySlice,
+        review: reviewSlice,
     },
     devTools: true,
 });

@@ -20,11 +20,11 @@ const AllNews = ({news}) => {
             <div className={styles.allNews_container}>
                 <PagesHeader title='Новости компании' desc='К вашему вниманию Здесь мы собрали все актуальные новости нашей компании' />
                 <div className={styles.allNews_inner}>
-                    {slice.map(({ id, images, title, description }) => (
-                        <div className={styles.allNews_item} style={{ backgroundImage: `url(${images[0]})`}}>
-                        <div className={styles.allNews_item_title}>{title}</div>
-                        <div className={styles.allNews_item_desc}>{description}</div>
-                        <Link to={`/products/${id}`} key={id} className={styles.allNews_item_btn}>
+                    {slice.map(({ id, main_photo, header, description }) => (
+                        <div className={styles.allNews_item} style={{ backgroundImage: `url(${main_photo})`}}>
+                        <div className={styles.allNews_item_title}>{header}</div>
+                        <div className={styles.allNews_item_desc}>{description.slice(0, 100)} . . .</div>
+                        <Link to={`/news/${id}`} key={id} className={styles.allNews_item_btn}>
                         УЗНАТЬ БОЛЬШЕ
                         </Link>
                         </div>

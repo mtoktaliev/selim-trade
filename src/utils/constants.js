@@ -1,1 +1,1 @@
-export const BASE_URL = "https://api.escuelajs.co/api/v1";
+export const BASE_URL = "http://161.35.29.179:8085";

@@ -2,11 +2,11 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import axios from "axios";
 import { BASE_URL } from "../../utils/constants";
 
-export const getCategories = createAsyncThunk(
-    'categories/getCategories', 
+export const getGatesTypes = createAsyncThunk(
+    'gatesTypes/getGatesTypes', 
     async (_, thunkAPI) => {
         try {
-            const res = await axios(`${BASE_URL}/categories`)
+            const res = await axios(`${BASE_URL}/gates/types`)
             return res.data;
         } catch(err) {
             return thunkAPI.rejectWithValue(err);
@@ -14,24 +14,24 @@ export const getCategories = createAsyncThunk(
     }
     );
 
-const categoriesSlice = createSlice({
-    name: 'categories',
+const GatesTypesSlice = createSlice({
+    name: 'gatesTypes',
     initialState: {
         list: [],
         isLoading: false,
     },
     extraReducers: (builder) => {
-        builder.addCase(getCategories.pending, (state) => {
+        builder.addCase(getGatesTypes.pending, (state) => {
             state.isLoading = true;
         });
-        builder.addCase(getCategories.fulfilled, (state, { payload }) => {
+        builder.addCase(getGatesTypes.fulfilled, (state, { payload }) => {
             state.list = payload;
             state.isLoading = false;
         });
-        builder.addCase(getCategories.rejected, (state) => {
+        builder.addCase(getGatesTypes.rejected, (state) => {
             state.isLoading = false;
         });
     },
 });
 
-export default categoriesSlice.reducer;
+export default GatesTypesSlice.reducer;

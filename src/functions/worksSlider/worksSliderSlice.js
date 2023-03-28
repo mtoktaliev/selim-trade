@@ -6,7 +6,7 @@ export const getWorksSlider = createAsyncThunk(
     'worksSlider/getWorksSlider', 
     async (_, thunkAPI) => {
         try {
-            const res = await axios(`${BASE_URL}/categories`)
+            const res = await axios(`${BASE_URL}/done`)
             return res.data;
         } catch(err) {
             return thunkAPI.rejectWithValue(err);

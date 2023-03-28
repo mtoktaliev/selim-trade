@@ -1,4 +1,4 @@
-.weoffer {
+.gatesTypes {
     background: url(./../../assets/img/we-offer-bg.jpg) 100% 100% no-repeat;
     background-size: cover;
     background-position: center bottom;
@@ -6,13 +6,13 @@
     padding: 0 0 100px 0;
 }
 
-.weoffer_container {
+.gatesTypes_container {
     max-width: 1270px;
 	padding: 0 15px;
 	margin: 0 auto;
 }
 
-.weoffer_inner {
+.gatesTypes_inner {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-auto-rows: 260px;
@@ -21,7 +21,7 @@
     color: #fff;
 }
 
-.weoffer_item {
+.gatesTypes_item {
     background-size: cover;
     background-position: center;
     cursor: pointer;
@@ -31,15 +31,15 @@
     transition: all 0.3s ease-in;
 }
 
-.weoffer_item:hover {
+.gatesTypes_item:hover {
     transform: scale(1.02);
 }
 
-.weoffer_item:nth-child(3n) {
+.gatesTypes_item:nth-child(3n) {
     grid-row: span 2;
 }
 
-.weoffer_item-name {
+.gatesTypes_item-name {
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(1.80838px);
     border-radius: 18.0838px;
@@ -52,7 +52,7 @@
     opacity: 0.9;
 }
 
-.weoffer_item-name:hover {
+.gatesTypes_item-name:hover {
     opacity: 1;
 }
 
@@ -65,7 +65,7 @@
 
 @media (max-width: 992px) {
 
-    .weoffer {
+    .gatesTypes {
         padding: 0 0 70px 0;
     }
     
@@ -74,21 +74,21 @@
 
 @media (max-width: 768px) {
 
-    .weoffer {
+    .gatesTypes {
         padding: 0 0 50px 0;
     }
     
-    .weoffer_inner {
+    .gatesTypes_inner {
         flex-wrap: nowrap;
         overflow-x: scroll;
         column-gap: 15px;
     }
 
-    .weoffer_inner::-webkit-scrollbar {
+    .gatesTypes_inner::-webkit-scrollbar {
         background: transparent;
     }
 
-    .weoffer_item-name {
+    .gatesTypes_item-name {
         border-radius: 12px;
         font-size: 25px;
     }
@@ -97,23 +97,23 @@
 
 @media (max-width: 576px) {
 
-    .weoffer_container {
+    .gatesTypes_container {
         padding: 0;
     }
 
-    .weoffer_inner {
+    .gatesTypes_inner {
         display: flex;
         padding: 0 15px;
         margin-bottom: 0;
     }
 
-    .weoffer_item {
+    .gatesTypes_item {
         border-radius: 10px;
         min-width: 250px;
         height: 180px;
     }
 
-    .weoffer_item-name {
+    .gatesTypes_item-name {
         border-radius: 9px;
         font-size: 18px;
     }

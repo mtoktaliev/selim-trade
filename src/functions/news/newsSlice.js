@@ -7,7 +7,7 @@ export const getNews = createAsyncThunk(
     'news/getNews', 
     async (_, thunkAPI) => {
         try {
-            const res = await axios(`${BASE_URL}/products`); // заменить на новости
+            const res = await axios(`${BASE_URL}/news`);
             return res.data;
         } catch(err) {
             return thunkAPI.rejectWithValue(err);
@@ -16,7 +16,7 @@ export const getNews = createAsyncThunk(
     );
 
 const newsSlice = createSlice({
-    name: 'news', //новости?
+    name: 'news',
     initialState: {
         list: [],
         isLoading: false,

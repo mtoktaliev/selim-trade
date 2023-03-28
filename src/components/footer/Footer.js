@@ -3,18 +3,18 @@ import { NavLink } from 'react-router-dom';
 
 import { ROUTES } from '../../utils/Routes'
 import logo from './../../assets/icons/logo-selim-trade-color.png';
-import './Footer.css';
+import styles from './Footer.module.css';
 
 class Footer extends Component {
     render() {
         return (
-            <footer className='footer'>
-                <div className="footer_container">
-                <div className="footer_inner">
-                    <div className='footer_menu-links'>
-                    <div className="footer_links">
-                        <NavLink to={ROUTES.HOME} className='footer_link'><img src={logo} alt='logotype' /></NavLink>
-                        <div className="footer_links-social">
+            <footer className={styles.footer}>
+                <div className={styles.footer_container}>
+                <div className={styles.footer_inner}>
+                    <div className={styles.footer_menu_links}>
+                    <div className={styles.footer_links}>
+                        <NavLink to={ROUTES.HOME} className={styles.footer_link}><img src={logo} alt='logotype' /></NavLink>
+                        <div className={styles.footer_links_social}>
                             <p>СОЦИАЛЬНЫЕ СЕТИ</p>
                             <a href="https://www.instagram.com/" target='_blank' rel='noreferrer'><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M25.5 2H10.5C5.80558 2 2 5.80558 2 10.5V25.5C2 30.1944 5.80558 34 10.5 34H25.5C30.1944 34 34 30.1944 34 25.5V10.5C34 5.80558 30.1944 2 25.5 2Z" stroke="url(#paint0_linear_539_72)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -55,30 +55,30 @@ class Footer extends Component {
                             </svg></a>
                         </div>
                     </div>
-                    <ul className="footer_menu">
-                        <li><NavLink to={ROUTES.HOME} className='footer_link'>Главная</NavLink></li>
-                        <li><NavLink to='/' className='footer_link'>о нас</NavLink></li>
-                        <li><NavLink to={ROUTES.SERVICES} className='footer_link'>Услуги</NavLink></li>
-                        <li><NavLink to={ROUTES.WORKS} className='footer_link'>Pаботы</NavLink></li>
-                        <li><NavLink to='/' className='footer_link'>отзывы</NavLink></li>
-                        <li><NavLink to={ROUTES.NEWSPAGE} className='footer_link'>Новости</NavLink></li>
+                    <ul className={styles.footer_menu}>
+                        <li><NavLink to={ROUTES.HOME} className={styles.footer_link}>Главная</NavLink></li>
+                        <li><NavLink to='/' className={styles.footer_link}>о нас</NavLink></li>
+                        <li><NavLink to={ROUTES.SERVICES} className={styles.footer_link}>Услуги</NavLink></li>
+                        <li><NavLink to={ROUTES.WORKS} className={styles.footer_link}>Pаботы</NavLink></li>
+                        <li><NavLink to='/' className={styles.footer_link}>отзывы</NavLink></li>
+                        <li><NavLink to={ROUTES.NEWSPAGE} className={styles.footer_link}>Новости</NavLink></li>
                     </ul>
                     </div>
-                    <div className="footer_contacts-map">
-                    <div className="footer_info">
-                        <div className='footer_schedule'>
+                    <div className={styles.footer_contacts_map}>
+                    <div className={styles.footer_info}>
+                        <div className={styles.footer_schedule}>
                             РЕЖИМ РАБОТЫ<br/>
                             Пн-Пт 8:30–18:30<br/>
                             Суббота 8:30–14:00
                         </div>
-                        <div className="footer_phones">
+                        <div className={styles.footer_phones}>
                             тЕЛЕФОН<br/>
                             +996 (552) 57 07 55<br/>
                             +996 (500) 88 80 51<br/>
                             +996 (772) 32 76 76
                         </div>
                     </div>
-                    <div className="footer_map" id='map'>
+                    <div className={styles.footer_map} id='map'>
                     <iframe 
                     title={'1'}
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d434.82895671787355!2d74.58702468325248!3d42.848166963734386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389ec9d9ff535571%3A0x8bff3ddc6fe576c1!2zMjIg0YPQuy4g0JDQudC90LgsINCR0LjRiNC60LXQuiA3MjAwNDQ!5e0!3m2!1sru!2skg!4v1679291456104!5m2!1sru!2skg" 
@@ -93,7 +93,7 @@ class Footer extends Component {
                 </div>
                 </div>
                 </div>
-                <div className="footer_bottom">
+                <div className={styles.footer_bottom}>
                     <p>© 2023 Selim Trade. Данный сайт защищён от копирования. Любая передача данных в интернете запрещена.</p>
                 </div>
             </footer>

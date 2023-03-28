@@ -2,7 +2,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import React, { Component } from 'react';
 import {reviewsData} from "./data";
-import './Reviews.css'
+import styles from './Reviews.module.css'
 import H2 from '../h2/H2';
 
 class Reviews extends Component {
@@ -33,8 +33,8 @@ class Reviews extends Component {
       };
       
         return (
-          <section className='reviews'>
-          <div className='reviews_container'>
+          <section className={styles.reviews}>
+          <div className={styles.reviews_container}>
             <H2 data='Отзывы наших клиентов' />
             <Carousel
             responsive={responsive} 
@@ -45,17 +45,17 @@ class Reviews extends Component {
             removeArrowOnDeviceType={["tablet", "mobile"]}
             >
                 {reviewsData.map(item => (
-                    <div className='reviews_item'>
-                        <div className='reviews_item-top'>
-                            <div className='reviews_item-avatar'>
+                    <div className={styles.reviews_item}>
+                        <div className={styles.reviews_item_top}>
+                            <div className={styles.reviews_item_avatar}>
                                 <img src={"./img/" + item.img} alt="author" />
                             </div>
-                            <div className='reviews_item-title'>
-                                <h3 className='reviews_author'>{item.author}</h3>
-                                <h4 className='reviews_product'>{item.product}</h4>
+                            <div className={styles.reviews_item_title}>
+                                <h3 className={styles.reviews_author}>{item.author}</h3>
+                                <h4 className={styles.reviews_product}>{item.product}</h4>
                             </div>
                         </div> 
-                        <p className='reviews_desc'>{item.desc}</p>
+                        <p className={styles.reviews_desc}>{item.desc}</p>
                     </div>
                 ))}
             </Carousel>

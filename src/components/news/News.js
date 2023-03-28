@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 import { ROUTES } from '../../utils/Routes'
 import H2 from "../h2/H2";
-import './News.css'
+import styles from './News.module.css'
 import LightBtn from "../lightBtn/LightBtn";
 
 const News = ({news =[], amount}) => {
@@ -11,15 +11,15 @@ const News = ({news =[], amount}) => {
     const list = news.filter((_, i) => i < amount);
 
     return ( 
-        <section className="news">
-            <div className="news_container">
+        <section className={styles.news}>
+            <div className={styles.news_container}>
                 <H2 data='Последние новости'/>
-                    <div className="news_inner">
+                    <div className={styles.news_inner}>
                         {list.map(({ id, images, title, description }) => (
-                            <div className="news_item" style={{ backgroundImage: `url(${images[0]})`}}>
-                            <div className="news_item-title">{title}</div>
-                            <div className="news_item-desc">{description}</div>
-                            <Link to={`/news`} key={id} className="news_item-btn">
+                            <div className={styles.news_item} style={{ backgroundImage: `url(${images[0]})`}}>
+                            <div className={styles.news_item_title}>{title}</div>
+                            <div className={styles.news_item_desc}>{description}</div>
+                            <Link to={`/news`} key={id} className={styles.news_item_btn}>
                                 УЗНАТЬ БОЛЬШЕ
                             </Link>
                             </div>

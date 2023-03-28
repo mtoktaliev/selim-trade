@@ -1,8 +1,8 @@
-import './LightBtn.css'
+import styles from './LightBtn.module.css'
 
 const LightBtn = (props) => {
     return (
-        <button className="light_btn" onClick={props.click}>{props.name}</button>   
+        <button className={styles.light_btn} onClick={props.click}>{props.name}</button>   
     );
 }
 

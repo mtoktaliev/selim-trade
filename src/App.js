@@ -13,7 +13,12 @@ import { getWorksGallery } from './functions/worksGallery/worksGallerySlice';
 import { getWorksSlider } from './functions/worksSlider/worksSliderSlice';
 import ScrollToTop from './utils/scrollToTop';
 
-function App() {
+import { getApiResource } from './utils/networks';
+
+
+
+const App= () => {
+  getApiResource();
 
   const dispatch = useDispatch();
 

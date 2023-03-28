@@ -7,5 +7,4 @@ export const ROUTES = {
     NEWS: '/products/:id',
     WORKSSLIDER: '/categories/:id',
     WORKSGALLERY: '/products/:id',
-    ADMIN: '/admin',
 }

@@ -1,9 +1,9 @@
-import './Btn.css'
+import styles from './Btn.module.css'
 
 
 const Btn = (props) => {
     return (
-        <button className='btn'>{props.icon}{props.name}</button>
+        <button className={styles.btn}>{props.icon}{props.name}</button>
     );
 }
 

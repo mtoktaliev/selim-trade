@@ -19,11 +19,11 @@
     text-align: left;
 }
 
-.reviews_item-top {
+.reviews_item_top {
     display: flex;
 }
 
-.reviews_item-avatar {
+.reviews_item_avatar {
     width: 70px; 
     height: 70px;
     border-radius: 50%;
@@ -32,13 +32,13 @@
     transform: translateY(-30%);
 }
 
-.reviews_item-avatar img {
+.reviews_item_avatar img {
     background-position: center;
     background-size: cover;
     height: 100%;
 }
 
-.reviews_item-title {
+.reviews_item_title {
     margin-left: 100px;
     margin-bottom: 20px;
 }
@@ -89,7 +89,7 @@
 
 @media (max-width: 576px) {
 
-    .reviews_item-avatar {
+    .reviews_item_avatar {
         width: 60px; 
         height: 60px;
     }

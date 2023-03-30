@@ -6,7 +6,7 @@ export const getGatesTypes = createAsyncThunk(
     'gatesTypes/getGatesTypes', 
     async (_, thunkAPI) => {
         try {
-            const res = await axios(`${BASE_URL}/gates/types`)
+            const res = await axios(`${BASE_URL}/gates`)
             return res.data;
         } catch(err) {
             return thunkAPI.rejectWithValue(err);

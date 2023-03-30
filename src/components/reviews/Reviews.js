@@ -52,7 +52,7 @@ const Reviews = ({review = [], amount}) => {
                             </div>
                             <div className={styles.reviews_item_title}>
                                 <h3 className={styles.reviews_author}>{item.name}</h3>
-                                <h4 className={styles.reviews_product}>{item.gatesType.type}</h4>
+                                <h4 className={styles.reviews_product}>{item.gates.header}</h4>
                             </div>
                         </div> 
                         <p className={styles.reviews_desc}>{item.text}</p>

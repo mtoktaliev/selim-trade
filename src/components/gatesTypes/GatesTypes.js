@@ -15,9 +15,9 @@ const GatesTypes = ({gatesTypes = [], amount}) => {
             <div className="gatesTypes_container">
                 <H2 data="Мы предлагаем"/>
                     <div className="gatesTypes_inner">
-                        {list.map(({ id, type, link }) => (
+                        {list.map(({ id, header, link }) => (
                             <div className="gatesTypes_item" key={id} style={{backgroundImage: `url(${link})`}}><NavLink to={`/gates/types/${id}`}>
-                                <p className="gatesTypes_item-name">{type}</p>
+                                <p className="gatesTypes_item-name">{header}</p>
                             </NavLink></div>
                         ))}
                     </div>

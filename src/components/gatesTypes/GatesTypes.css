@@ -29,6 +29,7 @@
     display: flex;
     align-items: flex-end;
     transition: all 0.3s ease-in;
+    background-color: #5061FF;
 }
 
 .gatesTypes_item:hover {

@@ -30,6 +30,7 @@
     position: absolute;
     overflow: hidden;
     transform: translateY(-30%);
+    background-color: #5061FF;
 }
 
 .reviews_item_avatar img {

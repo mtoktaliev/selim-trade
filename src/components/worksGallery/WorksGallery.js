@@ -11,9 +11,9 @@ const WorksGallery = ({worksGallery =[], amount}) => {
             <div className="worksGallery_container">
                 <PagesHeader title='Наши работы' desc='Здесь мы собрали наши лучшие проекты, чтобы вы могли вдохновиться идеями для собственного проекта. Вы найдёте проект по душе и нраву, который захотите воплотить в жизнь.' />
                 <div className="worksGallery_inner">
-                    {list.map(({id, title, images}) => (
+                    {list.map(({id, link}) => (
                         <div className="worksGallery_img">
-                            <img src={images[0]} alt={title} key={id}/>
+                            <img src={link} alt={id} key={id}/>
                         </div>
                     ))}
                 </div>

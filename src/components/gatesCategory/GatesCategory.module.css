@@ -1,18 +1,18 @@
-.services_container {
+.gates_container {
     max-width: 1270px;
 	padding: 0 15px;
 	margin: 0 auto;
 	height: 100%;
 }
 
-.services_inner {
+.gates_inner {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     grid-gap: 15px;
     color: #fff;
 }
 
-.services_item {
+.gates_item {
     min-width: 300px;
     height: 350px;
     background-size: cover;
@@ -21,14 +21,15 @@
     display: flex;
     align-items: flex-end;
     transition: all 0.3s ease-in;
+    background-color: #5061FF;
 }
 
-.services_item:hover {
-    transform: scale(1.02);
+.gates_item:hover {
+    transform: scale(1.01);
 }
 
-.services_item-name {
-    background: rgba(0, 0, 0, 0.2);
+.gates_item_name {
+    background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(1.80838px);
     border-radius: 18.0838px;
     font-weight: 800;
@@ -40,17 +41,17 @@
     opacity: 0.9;
 }
 
-.services_item-name:hover {
-    opacity: 1;
+.gates_item_name:hover {
+    background: rgba(0, 0, 0, 0.7);
 }
 
 @media (max-width: 992px) {
 
-    .services_inner {
+    .gates_inner {
         grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     }
     
-    .services_item {
+    .gates_item {
         height: 300px;
     }
 
@@ -58,7 +59,7 @@
 
 @media (max-width: 768px) {
 
-    .services_item-name {
+    .gates_item_name {
         border-radius: 12px;
         font-size: 25px;
     }
@@ -67,15 +68,15 @@
 
 @media (max-width: 576px) {
 
-    .services_inner {
+    .gates_inner {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
     
-    .services_item {
+    .gates_item {
         height: 220px;
     }
 
-    .services_item-name {
+    .gates_item_name {
         border-radius: 9px;
         font-size: 18px;
     }

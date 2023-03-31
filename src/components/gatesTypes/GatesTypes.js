@@ -16,13 +16,15 @@ const GatesTypes = ({gatesTypes = [], amount}) => {
                 <H2 data="Мы предлагаем"/>
                     <div className="gatesTypes_inner">
                         {list.map(({ id, header, link }) => (
-                            <div className="gatesTypes_item" key={id} style={{backgroundImage: `url(${link})`}}><NavLink to={`/gates/types/${id}`}>
-                                <p className="gatesTypes_item-name">{header}</p>
-                            </NavLink></div>
+                            <div className="gatesTypes_item" key={id} style={{backgroundImage: `url(${link})`}}>
+                                <NavLink to={`/gates/${id}`}>
+                                    <p className="gatesTypes_item-name">{header}</p>
+                                </NavLink>
+                            </div>
                         ))}
                     </div>
             </div>
-        <NavLink to={ROUTES.SERVICES}><LightBtn name="смотреть все" /></NavLink>
+        <NavLink to={ROUTES.GATES}><LightBtn name="смотреть все" /></NavLink>
         </section>
     );
 }

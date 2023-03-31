@@ -39,9 +39,10 @@ const Navbar = () => {
                     
                     <ul className='nav_list' style={hideOrSwow} onClick={handleMenu}>
                         <NavLink to={ROUTES.HOME} className='nav_link'>Главная</NavLink>
-                        <NavLink to={ROUTES.SERVICES} className='nav_link'>Услуги</NavLink>
+                        <NavLink to={ROUTES.GATES} className='nav_link'>Услуги</NavLink>
                         <NavLink to={ROUTES.NEWSPAGE} className='nav_link'>Новости</NavLink>
                         <NavLink to={ROUTES.WORKS} className='nav_link'>Наши работы</NavLink>
+                        <NavLink to={ROUTES.ADMINPANEL} className='nav_link'>Админ панель</NavLink>
                         <div className="contacts">
                             <Link className='nav_link' to="map" spy={true} smooth={true} offset={50} duration={500} onClick={handleMenu}>г. Бишкек</Link>
                             <NavLink className='nav_link' to="tel:+996552570755"><br/>+996 (552) 57 07 55</NavLink>

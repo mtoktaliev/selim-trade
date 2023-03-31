@@ -41,7 +41,7 @@
 }
 
 .gatesTypes_item-name {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(1.80838px);
     border-radius: 18.0838px;
     font-weight: 800;
@@ -50,11 +50,10 @@
     white-space: nowrap;
     margin: 10px;
     padding: 0 15px;
-    opacity: 0.9;
 }
 
 .gatesTypes_item-name:hover {
-    opacity: 1;
+    background: rgba(0, 0, 0, 0.7);
 }
 
 

@@ -7,7 +7,7 @@ export const getWorksGallery = createAsyncThunk(
     'worksGallery/getWorksGallery', 
     async (_, thunkAPI) => {
         try {
-            const res = await axios(`${BASE_URL}/products`)
+            const res = await axios(`${BASE_URL}/done`)
             return res.data;
         } catch(err) {
             return thunkAPI.rejectWithValue(err);

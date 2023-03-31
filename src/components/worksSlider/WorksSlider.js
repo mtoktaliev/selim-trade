@@ -37,7 +37,7 @@ const WorksSlider = () => {
       };
 
     return (
-        <div className='worksSlider'>
+        <section className='worksSlider'>
             <H2 data="Наши работы" />
             <div className="worksSlider_container">
             
@@ -49,16 +49,16 @@ const WorksSlider = () => {
             transitionDuration={500}
             removeArrowOnDeviceType={["tablet", "mobile"]}
             >
-                {list.map(({id, name, image}) => (
-                    <NavLink to={`/categories/${id}`}>
+                {list.map(({id, link}) => (
+                    <NavLink to={`/done/${id}`}>
                         <div className='worksSlider_item'>
-                            <img src={image} alt={name} />
+                            <img src={link} alt={id} />
                         </div>
                     </NavLink>
                 ))}
             </Carousel>
             </div>
-        </div>
+        </section>
     );
 }
 

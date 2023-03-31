@@ -16,7 +16,7 @@ const Home = () => {
         <>
             <Header />
             <Aboutus />
-            <GatesTypes gatesTypes={gatesTypes.list} amount={6}/>
+            <GatesTypes gatesTypes={gatesTypes.list} amount={5}/>
             <Advantages />
             <News news={news.list} amount={3}/>
             <WorksSlider />

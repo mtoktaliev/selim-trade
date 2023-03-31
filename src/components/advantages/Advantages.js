@@ -10,7 +10,7 @@ import guarantee from './../../assets/icons/advantages/our-advantages-guarantee.
 const Advantages = () => {
 
     return ( 
-        <div className={styles.advantages}>
+        <section className={styles.advantages}>
             <div className={styles.advantages_container}>
                 <H2 data="Наши преимущества" />
                 <div className={styles.advantages_inner}>
@@ -37,7 +37,7 @@ const Advantages = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
      );
 }
  

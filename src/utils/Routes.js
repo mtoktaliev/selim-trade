@@ -1,10 +1,7 @@
 export const ROUTES = {
     HOME: '/',
-    SERVICES: '/services',
-    WORKS: '/works',
+    GATES: '/gates',
     NEWSPAGE: '/news',
-    CATEGORIES: '/categories/:id',
-    NEWS: '/products/:id',
-    WORKSSLIDER: '/categories/:id',
-    WORKSGALLERY: '/products/:id',
+    WORKS: '/works',
+    ADMINPANEL: '/admin',
 }

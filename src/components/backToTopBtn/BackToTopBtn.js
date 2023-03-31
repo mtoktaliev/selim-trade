@@ -24,7 +24,7 @@ const BackToTopBtn = () => {
     }
 
     return (
-        <div>
+        <>
             {backToTopBtn && (
                 <button className={styles.scrollBtn}
                 onClick={scrollUp}>
@@ -33,7 +33,7 @@ const BackToTopBtn = () => {
                     </svg>
                 </button>
             )}
-        </div>
+        </>
     );
 };
 

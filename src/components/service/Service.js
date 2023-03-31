@@ -8,7 +8,7 @@ import postguarantee from './../../assets/icons/service/service-postguarantee-ic
 const Service = () => {
 
     return ( 
-        <div className={styles.service}>
+        <section className={styles.service}>
             <div className={styles.service_container}>
                 <H2 data="Сервис" />
                 <div className={styles.service_inner}>
@@ -30,7 +30,7 @@ const Service = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
      );
 }
  

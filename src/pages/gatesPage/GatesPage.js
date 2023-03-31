@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 
-import ServicesCategory from '../../components/servicesCategory/ServicesCategory';
+import GatesCategory from '../../components/gatesCategory/GatesCategory';
 
 const Services = () => {
 
@@ -8,7 +8,7 @@ const Services = () => {
 
     return (
         <div>
-            <ServicesCategory gatesTypes={gatesTypes.list} amount={10} />
+            <GatesCategory gatesTypes={gatesTypes.list} amount={10} />
         </div>
     );
 }

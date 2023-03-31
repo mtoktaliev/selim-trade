@@ -1,7 +1,8 @@
 /* ---- H2 -----*/
 .h2 {
-    font-weight: 700;
-    font-size: 40px;
+    font-weight: 800;
+    font-size: 35px;
+	text-transform: uppercase;
     margin-bottom: 25px;
 }
 

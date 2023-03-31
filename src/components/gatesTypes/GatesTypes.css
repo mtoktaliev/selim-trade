@@ -25,7 +25,7 @@
     background-size: cover;
     background-position: center;
     cursor: pointer;
-    border-radius: 18px;
+    border-radius: 12px;
     display: flex;
     align-items: flex-end;
     transition: all 0.3s ease-in;
@@ -43,7 +43,7 @@
 .gatesTypes_item-name {
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(1.80838px);
-    border-radius: 18.0838px;
+    border-radius: 10px;
     font-weight: 800;
     font-size: 32px;
     line-height: 150%;
@@ -77,6 +77,10 @@
     .gatesTypes {
         padding: 0 0 50px 0;
     }
+
+    .gatesTypes_item {
+        border-radius: 9px;
+    }
     
     .gatesTypes_inner {
         flex-wrap: nowrap;
@@ -89,7 +93,7 @@
     }
 
     .gatesTypes_item-name {
-        border-radius: 12px;
+        border-radius: 7px;
         font-size: 25px;
     }
     
@@ -100,6 +104,7 @@
     .gatesTypes_container {
         padding: 0;
     }
+    
 
     .gatesTypes_inner {
         display: flex;
@@ -108,13 +113,13 @@
     }
 
     .gatesTypes_item {
-        border-radius: 10px;
+        border-radius: 9px;
         min-width: 250px;
         height: 180px;
     }
 
     .gatesTypes_item-name {
-        border-radius: 9px;
+        border-radius: 6px;
         font-size: 18px;
     }
 

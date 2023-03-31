@@ -2,7 +2,7 @@
 
 .light_btn {
     padding: 12px 30px;
-    border-radius: 18.0838px;
+    border-radius: 11px;
     border: 1px solid #105BFB;
     background-color: #fff;
     font-weight: 400;
@@ -27,7 +27,7 @@
 
     .light_btn {
 		padding: 12px 20px;
-		border-radius: 14px;
+		border-radius: 9px;
 		font-size: 18px;
 	}
 }
@@ -36,7 +36,7 @@
 
 	.light_btn {
 		padding: 12px 15px;
-		border-radius: 10px;
+		border-radius: 7px;
 		font-size: 14px;
 	}
     

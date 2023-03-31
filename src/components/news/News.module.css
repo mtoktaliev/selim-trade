@@ -22,7 +22,7 @@
 
 .news_item {
     height: 300px;
-    border-radius: 20px;
+    border-radius: 12px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -187,6 +187,7 @@
     .news_item {
         width: 380px;
         height: 250px;
+        border-radius: 9;
     }
     
 }
@@ -207,7 +208,7 @@
     }
 
     .news_item {
-        border-radius: 10px;
+        border-radius: 9px;
         width: 250px;
         height: 160px;
     }

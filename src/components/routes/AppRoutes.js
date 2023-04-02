@@ -3,21 +3,25 @@ import { Route, Routes } from 'react-router-dom';
 
 import { ROUTES } from '../../utils/Routes';
 
-import Home from '../../pages/home/Home';
+import HomePage from '../../pages/homePage/HomePage';
 import GatesPage from '../../pages/gatesPage/GatesPage';
 import NewsPage from '../../pages/newsPage/NewsPage';
-import Works from '../../pages/works/Works';
-import AdminPanel from '../../pages/adminPanel/AdminPanel';
+import WorksPage from '../../pages/worksPage/WorksPage';
+import AdminPage from '../../pages/adminPage/AdminPage';
+import LoginPage from '../../pages/loginPage/LoginPage';
+import RegisterPage from '../../pages/registerPage/RegisterPage';
 
 class AppRoutes extends Component {
     render() {
         return (
             <Routes>
-                <Route path={ROUTES.HOME} element={<Home />} />
+                <Route path={ROUTES.HOME} element={<HomePage />} />
                 <Route path={ROUTES.GATES} element={<GatesPage />} />
                 <Route path={ROUTES.NEWSPAGE} element={<NewsPage />} />
-                <Route path={ROUTES.WORKS} element={<Works />} />
-                <Route path={ROUTES.ADMINPANEL} element={<AdminPanel />} />
+                <Route path={ROUTES.WORKS} element={<WorksPage />} />
+                <Route path={ROUTES.ADMINPANEL} element={<AdminPage />} />
+                <Route path={ROUTES.LOGIN} element={<LoginPage />} />
+                <Route path={ROUTES.REGISTER} element={<RegisterPage />} />
             </Routes>
         );
     }

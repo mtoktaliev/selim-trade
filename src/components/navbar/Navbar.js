@@ -10,6 +10,8 @@ import { useState } from "react";
 
 const Navbar = () => {
 
+    const isAuth = false;
+
     // useEffect(() => {
     // window.addEventListener("scroll", () => {
     //     setScroll(window.scrollY > 100);
@@ -48,9 +50,11 @@ const Navbar = () => {
                         <Link className='nav_link' style={{fontSize: '15px'}} to="map" spy={true} smooth={true} offset={50} duration={500} onClick={handleMenu}><CiLocationOn/>&thinsp;г. Бишкек</Link>
                         <NavLink className='nav_link' style={{fontSize: '15px'}} to="tel:+996552570755"><CiPhone/>&thinsp;+996 (552) 57 07 55</NavLink>
                     </div>
-                    <NavLink to={ROUTES.ADMINPANEL}><button className='sign_btn_toggle'>Войти</button></NavLink>
+                    {isAuth ? <button className='sign_btn_toggle'>Выйти</button> : <NavLink to={ROUTES.LOGIN}><button className='sign_btn_toggle'>Войти</button></NavLink>}
                 </ul>
-                    <NavLink to={ROUTES.ADMINPANEL}><button className='sign_btn'>Войти</button></NavLink>
+
+                {isAuth ? <button className='sign_btn'>Выйти</button> : <NavLink to={ROUTES.LOGIN}><button className='sign_btn'>Войти</button></NavLink>}
+                    
                 
                 
                 {isOpen ? <div className='nav_toggle open'onClick={handleMenu}>

@@ -5,6 +5,7 @@ import newsSlice from "./news/newsSlice";
 import worksGallerySlice from "./worksGallery/worksGallerySlice";
 import worksSliderSlice from "./worksSlider/worksSliderSlice";
 import reviewSlice from "./review/reviewSlice";
+import authSlice from "./auth/authSlice";
 
 export const store = configureStore({
     reducer: {
@@ -13,6 +14,7 @@ export const store = configureStore({
         worksSlider: worksSliderSlice,
         worksGallery: worksGallerySlice,
         review: reviewSlice,
+        auth: authSlice,
     },
     devTools: true,
 });

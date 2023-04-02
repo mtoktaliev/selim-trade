@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { ToastContainer } from 'react-toastify';
 
 import './../src/styles/main.css';
 import BackToTopBtn from './components/backToTopBtn/BackToTopBtn';
 import Footer from './components/footer/Footer';
-import Forms from './components/forms/Forms';
 import Navbar from './components/navbar/Navbar';
 import AppRoutes from './components/routes/AppRoutes';
 import { getGatesTypes } from './functions/gatesTypes/gatesTypesSlice';
@@ -36,8 +36,8 @@ const App= () => {
       <ScrollToTop />
       <Navbar />
       <AppRoutes />
-      <Forms />
       <BackToTopBtn />
+      <ToastContainer position='bottom-right' />
       <Footer />
     </div>
   );

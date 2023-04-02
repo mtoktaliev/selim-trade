@@ -7,8 +7,9 @@ import Reviews from '../../components/reviews/Reviews';
 import Service from '../../components/service/Service';
 import GatesTypes from '../../components/gatesTypes/GatesTypes';
 import WorksSlider from '../../components/worksSlider/WorksSlider';
+import Forms from '../../components/forms/Forms';
 
-const Home = () => {
+const HomePage = () => {
 
     const { news, gatesTypes, review } = useSelector((state) => state);
 
@@ -22,8 +23,9 @@ const Home = () => {
             <WorksSlider />
             <Service />
             <Reviews review={review.list} amount={10}/>
+            <Forms />
         </>
     );
 }
 
-export default Home;
+export default HomePage;

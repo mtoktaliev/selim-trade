@@ -2,9 +2,9 @@
 
 .btn {
     padding: 12px 38px;
-    background: linear-gradient(90.13deg, #105BFB 0.1%, #5061FF 134.04%);
-    color: #fff;
-    border-radius: 11px;
+    background: var(--blue-gradient);
+    color: var(--color-light);
+    border-radius: var(--L-border-radius);
     font-family: 'Inter';
     font-style: normal;
     font-weight: 900;
@@ -26,8 +26,6 @@
 
     .btn {
         padding: 12px 31px;
-        background: linear-gradient(90.13deg, #105BFB 0.1%, #5061FF 134.04%);
-        border-radius: 9px;
         font-size: 20px;
     }
 
@@ -39,15 +37,16 @@
 
 @media (max-width: 768px) {
 
-    
+    .btn {
+        border-radius: var(--M-border-radius);
+    }
 }
 
 @media (max-width: 576px) {
 
     .btn {
         padding: 10px 25px;
-        background: linear-gradient(90.13deg, #105BFB 0.1%, #5061FF 134.04%);
-        border-radius: 7px;
+        border-radius: var(--S-border-radius);
         font-size: 16px;
     }
 

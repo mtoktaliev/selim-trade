@@ -1,9 +1,8 @@
 import { NavLink } from "react-router-dom";
 
-import { ROUTES } from '../../utils/Routes'
 import H2 from "../h2/H2";
 import LightBtn from '../lightBtn/LightBtn';
-import './GatesTypes.css'
+import styles from './GatesTypes.module.css'
 
 
 const GatesTypes = ({gatesTypes = [], amount}) => {
@@ -11,20 +10,20 @@ const GatesTypes = ({gatesTypes = [], amount}) => {
     const list = gatesTypes.filter((_, i) => i < amount);
 
     return (
-        <section className="gatesTypes">
-            <div className="gatesTypes_container">
+        <section className={styles.section}>
+            <div className={styles.container}>
                 <H2 data="Мы предлагаем"/>
-                    <div className="gatesTypes_inner">
+                    <div className={styles.inner}>
                         {list.map(({ id, header, link }) => (
-                            <div className="gatesTypes_item" key={id} style={{backgroundImage: `url(${link})`}}>
+                            <div className={styles.item} key={id} style={{backgroundImage: `url(${link})`}}>
                                 <NavLink to={`/gates/${id}`}>
-                                    <p className="gatesTypes_item-name">{header}</p>
+                                    <p className={styles.item_name}>{header}</p>
                                 </NavLink>
                             </div>
                         ))}
                     </div>
             </div>
-        <NavLink to={ROUTES.GATES}><LightBtn name="смотреть все" /></NavLink>
+        <NavLink to='gates'><LightBtn name="смотреть все" /></NavLink>
         </section>
     );
 }

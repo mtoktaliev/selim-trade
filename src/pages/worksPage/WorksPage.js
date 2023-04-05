@@ -1,7 +1,6 @@
 import { useSelector } from 'react-redux';
 
 import WorksGallery from '../../components/worksGallery/WorksGallery';
-import Forms from '../../components/forms/Forms';
 
 const WorksPage = () => {
 
@@ -10,7 +9,6 @@ const WorksPage = () => {
     return (
         <div>
             <WorksGallery worksGallery={worksGallery.list} amount={20} />
-            <Forms />
         </div>
     );
 }

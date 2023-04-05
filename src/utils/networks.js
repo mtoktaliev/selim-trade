@@ -1,5 +1,5 @@
 const SELIM_ROOT = 'http://161.35.29.179:8085/';
-const SELIM_NEWS = 'gates';
+const SELIM_NEWS = 'news';
 
 export const getApiResource = () => {
     fetch(SELIM_ROOT+SELIM_NEWS)

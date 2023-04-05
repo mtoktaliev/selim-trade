@@ -18,9 +18,9 @@
 
 .forms input {
     width: 100%;
-    border: 0.5px solid #414141;
+    border: 0.5px solid var(--color-dark);
     padding: 15px;
-    border-radius: 20px;
+    border-radius: var(--L-border-radius);
     font-size: 20px;
     text-transform: lowercase;
 }
@@ -32,7 +32,7 @@
     border: 0.5px solid #414141;
     margin-top: 30px;
     padding: 15px;
-    border-radius: 20px;
+    border-radius: var(--L-border-radius);
     font-size: 20px;
     text-transform: lowercase;
 }
@@ -72,7 +72,12 @@
         display: block;
     }
 
+    .forms input {
+        border-radius: var(--M-border-radius);
+    }
+
     .forms textarea {
+        border-radius: var(--M-border-radius);
         margin-top: 0;
     }
 
@@ -89,10 +94,12 @@
     }
 
     .forms input {
+        border-radius: var(--S-border-radius);
         font-size: 14px;
     }
 
     .forms textarea {
+        border-radius: var(--S-border-radius);
         height: 150px;
         font-size: 14px;
         margin-top: 0;

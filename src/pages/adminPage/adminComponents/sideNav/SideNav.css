@@ -1,0 +1,32 @@
+.sideNav_container {
+    width: 240px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 30px;
+    background: var(--color-light);
+    position: fixed;
+}
+
+.sideNav_list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sideNav_link {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: var(--L-border-radius);
+}
+
+.sideNav_link:hover {
+    background: #E5E5E5;
+}
+
+.sideNav_link.active {
+    background: var(--blue-gradient);
+    color: var(--color-light);
+}

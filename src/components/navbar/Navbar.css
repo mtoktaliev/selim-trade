@@ -66,23 +66,6 @@
     display: none;
 }
 
-.sign_btn {
-    padding: 7px 20px;
-    background: linear-gradient(90.13deg, #105BFB 0.1%, #5061FF 134.04%);
-    color: #fff;
-    border-radius: 5px;
-    transition: all 0.3s ease-in;
-}
-
-.sign_btn:hover {
-    transform: scale(1.02);
-}
-
-.sign_btn_toggle {
-    display: none;
-}
-
-
 @media (max-width: 992px) {
 
     .phone {

@@ -1,57 +1,57 @@
-.gates_container {
+.container {
     max-width: 1270px;
 	padding: 0 15px;
 	margin: 0 auto;
 	height: 100%;
 }
 
-.gates_inner {
+.inner {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     grid-gap: 15px;
-    color: #fff;
+    color: var(--color-light);
 }
 
-.gates_item {
+.item {
     min-width: 300px;
     height: 350px;
     background-size: cover;
     cursor: pointer;
-    border-radius: 18px;
+    border-radius: var(--L-border-radius);
     display: flex;
     align-items: flex-end;
     transition: all 0.3s ease-in;
-    background-color: #5061FF;
+    background: var(--blue-gradient);
 }
 
-.gates_item:hover {
+.item:hover {
     transform: scale(1.01);
 }
 
-.gates_item_name {
+.item_name {
+    max-width: 400px;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(1.80838px);
-    border-radius: 18.0838px;
+    border-radius: var(--L-border-radius);
     font-weight: 800;
-    font-size: 32px;
-    line-height: 150%;
-    white-space: nowrap;
+    font-size: 28px;
+    line-height: 120%;
+    text-align: left;
     margin: 10px;
-    padding: 0 15px;
-    opacity: 0.9;
+    padding: 10px 15px;
 }
 
-.gates_item_name:hover {
+.item_name:hover {
     background: rgba(0, 0, 0, 0.7);
 }
 
 @media (max-width: 992px) {
 
-    .gates_inner {
+    .inner {
         grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     }
     
-    .gates_item {
+    .item {
         height: 300px;
     }
 
@@ -59,25 +59,30 @@
 
 @media (max-width: 768px) {
 
-    .gates_item_name {
-        border-radius: 12px;
-        font-size: 25px;
+    .item {
+        border-radius: var(--M-border-radius);
+    }
+
+    .item_name {
+        border-radius: var(--M-border-radius);
+        font-size: 22px;
     }
     
 }
 
 @media (max-width: 576px) {
 
-    .gates_inner {
+    .inner {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
     
-    .gates_item {
+    .item {
         height: 220px;
+        border-radius: var(--S-border-radius);
     }
 
-    .gates_item_name {
-        border-radius: 9px;
+    .item_name {
+        border-radius: var(--S-border-radius);
         font-size: 18px;
     }
 

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { ROUTES } from '../../utils/Routes'
 import logo from './../../assets/icons/logo-selim-trade-color.png';
 import styles from './Footer.module.css';
 
@@ -13,7 +12,7 @@ class Footer extends Component {
                 <div className={styles.footer_inner}>
                     <div className={styles.footer_menu_links}>
                     <div className={styles.footer_links}>
-                        <NavLink to={ROUTES.HOME} className={styles.footer_link}><img src={logo} alt='logotype' /></NavLink>
+                        <NavLink to='/' className={styles.footer_link}><img src={logo} alt='logotype' /></NavLink>
                         <div className={styles.footer_links_social}>
                             <p>СОЦИАЛЬНЫЕ СЕТИ</p>
                             <a href="https://www.instagram.com/" target='_blank' rel='noreferrer'><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,12 +55,12 @@ class Footer extends Component {
                         </div>
                     </div>
                     <ul className={styles.footer_menu}>
-                        <li><NavLink to={ROUTES.HOME} className={styles.footer_link}>Главная</NavLink></li>
+                        <li><NavLink to='/' className={styles.footer_link}>Главная</NavLink></li>
                         <li><NavLink to='/' className={styles.footer_link}>о нас</NavLink></li>
-                        <li><NavLink to={ROUTES.SERVICES} className={styles.footer_link}>Услуги</NavLink></li>
-                        <li><NavLink to={ROUTES.WORKS} className={styles.footer_link}>Pаботы</NavLink></li>
+                        <li><NavLink to='gates' className={styles.footer_link}>Услуги</NavLink></li>
+                        <li><NavLink to='works' className={styles.footer_link}>Pаботы</NavLink></li>
                         <li><NavLink to='/' className={styles.footer_link}>отзывы</NavLink></li>
-                        <li><NavLink to={ROUTES.NEWSPAGE} className={styles.footer_link}>Новости</NavLink></li>
+                        <li><NavLink to='news' className={styles.footer_link}>Новости</NavLink></li>
                     </ul>
                     </div>
                     <div className={styles.footer_contacts_map}>

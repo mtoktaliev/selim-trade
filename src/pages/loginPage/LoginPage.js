@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 
 import { loginUser } from '../../functions/auth/authSlice';
@@ -11,20 +10,24 @@ const LoginPage = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const dispatch = useDispatch()
-    const { status } = useSelector((state) => state.auth)
-    // const navigate = useNavigate()
+    
 
     useEffect(() => {
-        if (status) {
-            toast(status)
-        }
-    }, [status])
+        
+    }, [])
 
     const handleSubmit = () => {
         try {
             dispatch(loginUser({username, password}))
         } catch (error) {
             console.log(error)
+        }
+        const st = localStorage.getItem("token")
+        if (st) {
+            toast("Вход совершен")
+        } 
+        else {
+            toast("Ошибка")
         }
     }
 
@@ -58,7 +61,6 @@ const LoginPage = () => {
                     <button type='submit'
                     onClick={handleSubmit}
                     className={styles.btn}>Войти</button>
-                    <Link to='/register' className={styles.register}>Нет аккаунта?</Link>
                 </div>
             </form>
         </section>

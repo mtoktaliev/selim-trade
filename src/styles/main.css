@@ -1,21 +1,26 @@
 @import './reset.css';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
 
+:root {
+	--color-blue: #105BFB;
+	--color-light: #fff;
+	--color-dark: #414141;
+	--blue-gradient: linear-gradient(90.13deg, #105BFB 0.1%, #5061FF 134.04%);
+
+	--L-border-radius: 12px;
+	--M-border-radius: 9px;
+	--S-border-radius: 7px;
+
+	--medium: 768px;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
-	color: #414141;
+	color: var(--color-dark);
 }
 
 .wrapper {
 	min-height: 100%;
 	width: 100%;
 	overflow: hidden;
-}
-
-.App {
-	background: url(../assets/img/forms-bg.jpg);
-	background-repeat: no-repeat;
-	background-position: bottom;
-	background-size: cover;
-	min-width: 100vw;
 }

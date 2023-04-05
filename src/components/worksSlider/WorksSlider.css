@@ -11,11 +11,11 @@
 
 
 .worksSlider_item {
-    border-radius: 20px;
+    border-radius: var(--L-border-radius);
     overflow: hidden;
     margin: 10px;
     height: 280px;
-    background-color: #5061FF;
+    background-color: var(--blue-gradient);
 }
 
 .worksSlider_item img {
@@ -37,6 +37,10 @@
     .worksSlider {
         padding: 50px 0;
     }
+
+    .worksSlider_item {
+        border-radius: var(--M-border-radius);
+    }
 }
 
 @media (max-width: 576px) {
@@ -48,5 +52,8 @@
         text-align: center;
     }
 
-    
+    .worksSlider_item {
+        border-radius: var(--S-border-radius);
+        height: 200px;
+    }
 }

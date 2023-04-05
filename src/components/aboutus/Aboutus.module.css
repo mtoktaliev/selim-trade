@@ -25,9 +25,9 @@
     text-align: justify;
     padding: 20px;
     max-width: 533px;
-    background: #FFFFFF;
+    background: var(--color-light);
     box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    border-radius: var(--L-border-radius);
 }
 
 .aboutus_text p {
@@ -67,7 +67,7 @@
         text-align: left;
         padding: 15px;
         max-width: 400px;
-        border-radius: 7px;
+        border-radius: var(--M-border-radius);
     }
 }
 
@@ -82,7 +82,7 @@
         text-align: left;
         padding: 10px;
         max-width: 300px;
-        border-radius: 10px;
+        border-radius: var(--S-border-radius);
     }
     
 }

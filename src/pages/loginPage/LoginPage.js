@@ -1,33 +1,38 @@
 import { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 
-import { loginUser } from '../../functions/auth/authSlice';
+import { checkIsAuth, loginUser } from '../../functions/auth/authSlice';
 import styles from './Login.module.css'
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+
+    const {status} = useSelector((state) => state.auth)
+    const isAuth = useSelector(checkIsAuth)
     const dispatch = useDispatch()
+    const navigate = useNavigate()
+
+    console.log(status)
     
 
     useEffect(() => {
-        
-    }, [])
+        if(isAuth) navigate('/admin')
+        if(status === 'Incorrect credentials!') {
+            toast('Неверный логин или пароль')
+        } else if (status === undefined) {
+            toast('Вы вошли в систему')
+        }
+    }, [status, isAuth, navigate])
 
     const handleSubmit = () => {
         try {
             dispatch(loginUser({username, password}))
         } catch (error) {
             console.log(error)
-        }
-        const st = localStorage.getItem("token")
-        if (st) {
-            toast("Вход совершен")
-        } 
-        else {
-            toast("Ошибка")
         }
     }
 

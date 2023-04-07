@@ -16,8 +16,8 @@ export const registerUser = createAsyncThunk(
                 username,
                 password,
             })
-            if (data.token) {
-                window.localStorage.setItem('token', data.token)
+            if (data["jwt-token"]) {
+                window.localStorage.setItem('token', data["jwt-token"])
             }
             return data
         } catch(err) {
@@ -49,7 +49,14 @@ export const loginUser = createAsyncThunk(
 export const authSlice = createSlice({
     name: 'auth',
     initialState,
-    reducers: {},
+    reducers: {
+        logout: (state) => {
+            state.user = null
+            state.token = null
+            state.isLoading = false
+            state.status = null
+        }
+    },
     extraReducers: (builder) => {
         //Register user
         builder.addCase(registerUser.pending, (state) => {
@@ -60,7 +67,8 @@ export const authSlice = createSlice({
             state.isLoading = false
             state.status = action.payload.message
             state.user = action.payload.user
-            state.token = action.payload.token
+            state.token = action.payload["jwt-token"]
+            // state.token = action.payload.token
         });
         builder.addCase(registerUser.rejected, (state, action) => {
             state.status = action.payload.message
@@ -75,7 +83,8 @@ export const authSlice = createSlice({
             state.isLoading = false
             state.status = action.payload.message
             state.user = action.payload.user
-            state.token = action.payload.token
+            state.token = action.payload["jwt-token"]
+            // state.token = action.payload.token
         });
         builder.addCase(loginUser.rejected, (state, action) => {
             state.status = action.payload.message
@@ -84,4 +93,6 @@ export const authSlice = createSlice({
     },
 })
 
+export const checkIsAuth = state => Boolean(window.localStorage.getItem('token', state["jwt-token"]))
+export const {logout} = authSlice.actions
 export default authSlice.reducer

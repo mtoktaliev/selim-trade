@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { ToastContainer } from 'react-toastify';
 
 import { getGatesTypes } from '../../functions/gatesTypes/gatesTypesSlice';
 import { getNews } from '../../functions/news/newsSlice';
@@ -45,7 +44,6 @@ const ClientPage = () => {
                 <Route path='works' element={<WorksPage />} />
             </Routes>
             <BackToTopBtn />
-            <ToastContainer position='bottom-right' />
             <Forms />
             <Footer />
         </div>

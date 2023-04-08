@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from '../../utils/axios'
+import axios from 'axios';
 
 const initialState = {
     user: null,
@@ -8,29 +8,11 @@ const initialState = {
     status: null,
 }
 
-export const registerUser = createAsyncThunk(
-    'auth/registerUser',
-    async ({username, password}) => {
-        try {
-            const { data } = await axios.post('/auth/registration', {
-                username,
-                password,
-            })
-            if (data["jwt-token"]) {
-                window.localStorage.setItem('token', data["jwt-token"])
-            }
-            return data
-        } catch(err) {
-            console.log("error")
-        }
-    },
-
-)
 export const loginUser = createAsyncThunk(
     'auth/loginUser',
     async ({username, password}) => {
         try {
-            const { data } = await axios.post('/auth/login', {
+            const { data } = await axios.post('http://161.35.29.179:8085/auth/login', {
                 username,
                 password,
             })
@@ -58,22 +40,6 @@ export const authSlice = createSlice({
         }
     },
     extraReducers: (builder) => {
-        //Register user
-        builder.addCase(registerUser.pending, (state) => {
-            state.isLoading = true
-            state.status = null
-        });
-        builder.addCase(registerUser.fulfilled, (state, action) => {
-            state.isLoading = false
-            state.status = action.payload.message
-            state.user = action.payload.user
-            state.token = action.payload["jwt-token"]
-            // state.token = action.payload.token
-        });
-        builder.addCase(registerUser.rejected, (state, action) => {
-            state.status = action.payload.message
-            state.isLoading = false; 
-        });
         //Login user
         builder.addCase(loginUser.pending, (state) => {
             state.isLoading = true
@@ -93,6 +59,6 @@ export const authSlice = createSlice({
     },
 })
 
-export const checkIsAuth = state => Boolean(window.localStorage.getItem('token', state["jwt-token"]))
+export const checkIsAuth = (state) => Boolean(window.localStorage.getItem('token', state["jwt-token"]))
 export const {logout} = authSlice.actions
 export default authSlice.reducer

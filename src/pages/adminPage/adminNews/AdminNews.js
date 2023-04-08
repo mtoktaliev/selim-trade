@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { CiImageOn } from "react-icons/ci";
+import { CiCircleCheck } from "react-icons/ci";
+import { CiCircleRemove } from "react-icons/ci";
+
 import { createPostNews } from '../../../functions/postNews/postNewsSlice';
+import styles from './AdminNews.module.css'
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const AdminNews = () => {
     const [header, setHeader] = useState('')
@@ -9,52 +16,94 @@ const AdminNews = () => {
     const [second_photo, setSecond_photo] = useState('')
 
     const dispatch = useDispatch()
+    const navigate = useNavigate()
     
     const submitHandler = () => {
-        try {
+        if (!header ) {
+            alert("Введите заголовок")
+        } else if (!description ) {
+            alert("Введите текст")
+        } else if (!main_photo) {
+            alert("Загрузите фото обложки")
+        } else if (!second_photo) {
+            alert("Загрузите фото для текста")
+        } else {
             const data = new FormData()
             data.append('header', header)
             data.append('description', description)
             data.append('file1', main_photo)
             data.append('file2', second_photo)
             dispatch(createPostNews(data))
-        } catch (error) {
-            console.log(error)
+            navigate('/admin')
+            toast('Новость сохранена')
         }
+    }
+
+    const clearFormHandler = () => {
+        setHeader('')
+        setDescription('')
     }
     
     return (
         <form
-        className=''
+        className={styles.container}
         onSubmit={(e) => e.preventDefault()}
         >
-            <label className=''>
-                Прикрепить изображение
-                <input type='file' className=''onChange={(e) => setMain_photo(e.target.files[0])} />
-            </label>
-            <div className=''>IMAGE</div>
-            <label className=''>
-                Прикрепить изображение
-                <input type='file' className=''onChange={(e) => setSecond_photo(e.target.files[0])} />
-            </label>
-            <div className=''>IMAGE</div>
-        <br/>
-        <br/>
-            <label className=''>
+            <div className={styles.imgContainer}>
+                <div>
+                <div className={styles.imgPreview}>
+                    {main_photo && <img src={URL.createObjectURL(main_photo)} alt='img' />}</div>
+                <label className={styles.imgLabel}>
+                    <CiImageOn/>&thinsp;Прикрепить изображение
+                    <input 
+                    type='file' 
+                    className={styles.imgBtn}
+                    onChange={(e) => setMain_photo(e.target.files[0])} />
+                </label>
+                </div>
+                
+                <div>
+                <div className={styles.imgPreview}>
+                    {second_photo && <img src={URL.createObjectURL(second_photo)} alt='img' />}</div>
+                <label className={styles.imgLabel}>
+                    <CiImageOn/>&thinsp;Прикрепить изображение
+                    <input 
+                    type='file' 
+                    className={styles.imgBtn}
+                    onChange={(e) => setSecond_photo(e.target.files[0])} />
+                </label>
+                </div>
+            </div>
+
+            <div className={styles.textContainer}>       
+            <label className={styles.textLabel}>
                 Заголовок
-                <input type="text" className='' placeholder='Заголовок' value={header} onChange={e => setHeader(e.target.value)}/>
+                <textarea 
+                type="text" className={styles.title} 
+                placeholder='Заголовок' 
+                value={header} 
+                onChange={e => setHeader(e.target.value)}
+                maxlength="100"
+                />
             </label>
-        <br/>
-        <br/>
-            <label className=''>
+            
+            <label className={styles.textLabel}>
                 Текст
-                <textarea type="text" className='' placeholder='Текст' onChange={(e) => setDescription(e.target.value)}/>
+                <textarea 
+                type="text" 
+                className={styles.text} 
+                value={description}
+                placeholder='Текст' 
+                onChange={(e) => setDescription(e.target.value)}
+                maxlength="400"
+                />
             </label>
-        <br/>
-        <br/>
-            <div className=''>
-                <button className='' onClick={submitHandler}>Добавить</button>
-                <button className=''>Отменить</button>
+            </div>
+            
+            <div className={styles.btns}>
+                <button className={styles.addBtn} onClick={submitHandler}><CiCircleCheck/>&thinsp;Добавить</button>
+                
+                <button className={styles.cancelBtn} onClick={clearFormHandler}><CiCircleRemove/>&thinsp;Отменить</button>
             </div>
         </form>
     );

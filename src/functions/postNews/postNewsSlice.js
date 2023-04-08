@@ -1,5 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import axios from '../../utils/axios'
+// import axios from '../../utils/axios'
+import { toast } from 'react-toastify'
+import instance from '../../utils/axios'
 
 const initialState = {
     postNews: [],
@@ -10,10 +12,11 @@ export const createPostNews = createAsyncThunk(
     'post/createPostNews', 
     async(params) => {
         try {
-            const {data} = await axios.post('/admin/news/save', params)
+            const {data} = await instance.post('/admin/news/save', params)
             return data
         } catch (error) {
             console.log(error)
+            toast(error.message)
         }
     })
 

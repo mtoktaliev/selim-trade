@@ -1,0 +1,63 @@
+.section {
+    background: var(--color-light);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.container div {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #e5e5e5;
+}
+
+.id { 
+    grid-area: 1 / 1 / 2 / 2; 
+    justify-content: center;
+}
+.header { 
+    grid-area: 1 / 2 / 2 / 5;
+}
+.description { 
+    grid-area: 1 / 5 / 2 / 10;
+}
+.edit { 
+    grid-area: 1 / 10 / 2 / 12;
+    justify-content: center;
+}
+.delete { 
+    grid-area: 1 / 12 / 2 / 13;
+    justify-content: center;
+}
+
+.editBtn {
+    display: flex;
+    align-items: center;
+    background: #E5E5E5;
+    padding: 10px 30px;
+    border-radius: var(--S-border-radius);
+}
+
+.editBtn:hover {
+    background: var(--blue-gradient);
+    color: var(--color-light);
+}
+
+.deleteBtn {
+    display: flex;
+    align-items: center;
+    background: rgb(255, 155, 155);
+    padding: 10px 30px;
+    border-radius: var(--S-border-radius);
+}
+
+.deleteBtn:hover {
+    background: rgb(255, 0, 0);
+    color: var(--color-light);
+}

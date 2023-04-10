@@ -15,7 +15,7 @@ const GatesTypes = ({gatesTypes = [], amount}) => {
                 <H2 data="Мы предлагаем"/>
                     <div className={styles.inner}>
                         {list.map(({ id, header, link }) => (
-                            <div className={styles.item} key={id} style={{backgroundImage: `url(${link})`}}>
+                            <div className={styles.item} key={id} style={{backgroundImage: `url(http://161.35.29.179:8085/image/${link})`}}>
                                 <NavLink to={`/gates/${id}`}>
                                     <p className={styles.item_name}>{header}</p>
                                 </NavLink>

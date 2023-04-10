@@ -10,15 +10,15 @@ const News = ({news =[], amount}) => {
     const list = news.filter((_, i) => i < amount);
 
     return ( 
-        <section className={styles.news}>
-            <div className={styles.news_container}>
+        <section className={styles.section}>
+            <div className={styles.container}>
                 <H2 data='Последние новости'/>
-                    <div className={styles.news_inner}>
+                    <div className={styles.inner}>
                         {list.reverse().map(({ id, main_photo, header, description }) => (
-                            <div className={styles.news_item} style={{ backgroundImage: `url(http://161.35.29.179:8085/image/${main_photo})`}}>
-                            <div className={styles.news_item_title}>{header}</div>
-                            <div className={styles.news_item_desc}>{description.slice(0, 100)} . . .</div>
-                            <Link to={`/news/${id}`} key={id} className={styles.news_item_btn}>
+                            <div className={styles.item} style={{ backgroundImage: `url(http://161.35.29.179:8085/image/${main_photo})`}}>
+                            <div className={styles.item_title}>{header}</div>
+                            <div className={styles.item_desc}>{description.slice(0, 100)}</div>
+                            <Link to={`/news/${id}`} key={id} className={styles.item_btn}>
                                 УЗНАТЬ БОЛЬШЕ
                             </Link>
                             </div>

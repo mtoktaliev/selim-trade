@@ -20,6 +20,7 @@ import NewsPage from '../newsPage/NewsPage';
 import WorksPage from '../worksPage/WorksPage';
 
 import './clientPage.css'
+import NewsIdPage from '../newsIdPage/NewsIdPage';
 
 const ClientPage = () => {
 
@@ -41,6 +42,7 @@ const ClientPage = () => {
                 <Route path='/' element={<HomePage />} />
                 <Route path='gates' element={<GatesPage />} />
                 <Route path='news' element={<NewsPage />} />
+                <Route path='news/:id' element={<NewsIdPage />} />
                 <Route path='works' element={<WorksPage />} />
             </Routes>
             <BackToTopBtn />

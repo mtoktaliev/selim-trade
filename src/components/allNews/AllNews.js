@@ -23,7 +23,7 @@ const AllNews = ({news}) => {
                     {slice.map(({ id, main_photo, header, description }) => (
                         <div className={styles.allNews_item} style={{ backgroundImage: `url(http://161.35.29.179:8085/image/${main_photo})`}}>
                         <div className={styles.allNews_item_title}>{header}</div>
-                        <div className={styles.allNews_item_desc}>{description.slice(0, 100)} . . .</div>
+                        <div className={styles.allNews_item_desc}>{description.slice(0, 100)}</div>
                         <Link to={`/news/${id}`} key={id} className={styles.allNews_item_btn}>
                         УЗНАТЬ БОЛЬШЕ
                         </Link>

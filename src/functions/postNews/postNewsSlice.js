@@ -21,7 +21,7 @@ export const createPostNews = createAsyncThunk(
     })
     
 
-export const getAllNews = createAsyncThunk('post/getAllPosts', async () => {
+export const getAllNews = createAsyncThunk('post/getAllNews', async () => {
     try {
         const { data } = await instance.get('/news')
         return data
@@ -61,7 +61,7 @@ export const postNewsSlice = createSlice({
         });
         builder.addCase(getAllNews.fulfilled, (state, action) => {
             state.loading = false
-            state.news = action.payload.news
+            state.postNews = action.payload
         });
         builder.addCase(getAllNews.rejected, (state) => {
             state.loading = false
@@ -73,7 +73,7 @@ export const postNewsSlice = createSlice({
         builder.addCase(removeNews.fulfilled, (state, action) => {
             state.loading = false
             state.postNews = state.postNews.filter(
-                (postNews) => postNews._id !== action.payload._id,
+                (news) => news._id !== action.payload._id,
             )
         });
         builder.addCase(removeNews.rejected, (state) => {

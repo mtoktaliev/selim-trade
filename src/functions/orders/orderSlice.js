@@ -1,18 +1,18 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 // import axios from '../../utils/axios'
 import { toast } from 'react-toastify'
-import instance from '../../utils/axios'
+import axios from 'axios';
 
 const initialState = {
-    postReview: [],
+    order: [],
     loading: false,
 }
 
-export const createPostReview = createAsyncThunk(
-    'post/createPostReview', 
+export const createOrder = createAsyncThunk(
+    'order/createOrder', 
     async(params) => {
         try {
-            const {data} = await instance.post('/admin/review/save', params)
+            const {data} = await axios.post('/order/save', params)
             return data
         } catch (error) {
             console.log(error)
@@ -20,23 +20,23 @@ export const createPostReview = createAsyncThunk(
         }
     })
 
-export const postReviewSlice = createSlice({
-    name: 'postReview',
+export const orderSlice = createSlice({
+    name: 'order',
     initialState,
     reducers: {},
     extraReducers: (builder) => {
         //Create review
-        builder.addCase(createPostReview.pending, (state) => {
+        builder.addCase(createOrder.pending, (state) => {
             state.loading = true
         });
-        builder.addCase(createPostReview.fulfilled, (state, action) => {
+        builder.addCase(createOrder.fulfilled, (state, action) => {
             state.loading = false
             state.postReview.push(action.payload)
         });
-        builder.addCase(createPostReview.rejected, (state) => {
+        builder.addCase(createOrder.rejected, (state) => {
             state.loading = false
         });
     },
 })
 
-export default postReviewSlice.reducer
+export default orderSlice.reducer

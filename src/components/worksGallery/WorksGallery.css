@@ -16,10 +16,9 @@
 }
 
 .worksGallery_img {
-    background: #5061FF;
     background-size: cover;
     overflow: hidden;
-    border-radius: 15px;
+    border-radius: var(--L-border-radius);
 }
 
 .worksGallery_img img {
@@ -46,7 +45,9 @@
 
 @media (max-width: 768px) {
 
-    
+    .worksGallery_img {
+        border-radius: var(--M-border-radius);
+    }
     
 }
 
@@ -61,11 +62,11 @@
     }
     
     .worksGallery_img {
-        background: #5061FF;
         background-size: cover;
         background-position: center;
         overflow: hidden;
         border-radius: 15px;
+        border-radius: var(--S-border-radius);
     }
     
     .worksGallery_img img {

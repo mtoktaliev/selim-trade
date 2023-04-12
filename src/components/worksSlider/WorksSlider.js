@@ -47,10 +47,10 @@ const WorksSlider = () => {
             autoPlay={true} 
             autoPlaySpeed={3000} 
             transitionDuration={500}
-            removeArrowOnDeviceType={["tablet", "mobile"]}
+            // removeArrowOnDeviceType={["tablet", "mobile"]}
             >
                 {list.map(({id, link}) => (
-                    <NavLink to={`/done/${id}`}>
+                    <NavLink to={`/works`}>
                         <div className='worksSlider_item'>
                             <img src={`http://161.35.29.179:8085/image/${link}`} alt={id} />
                         </div>

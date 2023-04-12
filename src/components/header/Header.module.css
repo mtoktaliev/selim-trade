@@ -25,6 +25,31 @@
     margin-bottom: 15px;
 }
 
+.header_title {
+    animation: 2s main-title ease-out 1;
+}
+
+@keyframes main-title {
+    0% {
+        opacity: 0;
+        transform: translateX(20%);
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
 .header_subtitle {
     max-width: 470px;
     font-weight: 600;

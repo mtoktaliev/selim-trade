@@ -9,7 +9,9 @@ import authSlice from "./auth/authSlice";
 import postNewsSlice from "./postNews/postNewsSlice";
 import postGatesSlice from "./postGates/postGatesSlice";
 import { apiSlice } from "./api/apiSlice";
-// import postReviewSlice from "./postReview/postReviewSlice";
+import doneSlice from "./done/doneSlice";
+import postReviewSlice from "./postReview/postReviewSlice";
+import { orderSlice } from "./orders/orderSlice";
 
 export const store = configureStore({
     reducer: {
@@ -21,7 +23,9 @@ export const store = configureStore({
         auth: authSlice,
         postNews: postNewsSlice,
         postGates: postGatesSlice,
-        // postReview: postReviewSlice,
+        done: doneSlice,
+        postReview: postReviewSlice,
+        order: orderSlice,
         [apiSlice.reducerPath]: apiSlice.reducer,
     },
     middleware: (getMiddleware) => getMiddleware().concat(apiSlice.middleware),

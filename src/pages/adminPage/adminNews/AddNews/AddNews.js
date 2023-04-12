@@ -44,9 +44,8 @@ const AddNews = () => {
         setDescription('')
     }
     return (
-        <>
         <section className={styles.section}>
-        <H2 data="Добавьте новость" />
+        <H2 data="Добавить новость" />
         <form
         className={styles.container}
         onSubmit={(e) => e.preventDefault()}
@@ -65,6 +64,7 @@ const AddNews = () => {
                 className={styles.imgBtn}
                 onChange={(e) => setSecond_photo(e.target.files[0])} />
             </label>      
+            
             <label className={styles.textLabel}>
                 Заголовок
                 <input 
@@ -84,7 +84,7 @@ const AddNews = () => {
                 value={description}
                 placeholder='Текст (Макс. 800 символов)' 
                 onChange={(e) => setDescription(e.target.value)}
-                maxlength="500"
+                maxlength="800"
                 />
             </label>
             
@@ -95,7 +95,6 @@ const AddNews = () => {
             </div>
         </form>
         </section>
-        </>
     );
 };
 

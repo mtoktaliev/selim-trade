@@ -52,7 +52,7 @@ const WorksSlider = () => {
                 {list.map(({id, link}) => (
                     <NavLink to={`/done/${id}`}>
                         <div className='worksSlider_item'>
-                            <img src={link} alt={id} />
+                            <img src={`http://161.35.29.179:8085/image/${link}`} alt={id} />
                         </div>
                     </NavLink>
                 ))}

@@ -9,8 +9,12 @@ export const apiSlice = createApi({
         getNews: builder.query({
             query: ({id}) => `/news/${id}`,
             providesTags: ["News"],
-        })
+        }),
+        getGatesTypes: builder.query({
+            query: ({id}) => `/gates/${id}`,
+            providesTags: ["gatesTypes"],
+        }),
     })
 })
 
-export const { useGetNewsQuery } = apiSlice;
+export const { useGetNewsQuery, useGetGatesTypesQuery} = apiSlice;

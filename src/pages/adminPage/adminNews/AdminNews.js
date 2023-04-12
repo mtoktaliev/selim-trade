@@ -6,8 +6,7 @@ import { getAllNews } from "../../../functions/postNews/postNewsSlice";
 
 const AdminNews = () => {
     const dispatch = useDispatch()
-    const {postNews} = useSelector((state) => state.postNews)
-    console.log(postNews)
+    const {postNews, id} = useSelector((state) => state.postNews)
 
     useEffect(() => {
         dispatch(getAllNews())
@@ -15,7 +14,7 @@ const AdminNews = () => {
     return (
         <>
         <AddNews />
-       <GetNews postNews={postNews} />
+       <GetNews postNews={postNews} key={id} />
         </>
     );
 };

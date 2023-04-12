@@ -21,6 +21,7 @@ import WorksPage from '../worksPage/WorksPage';
 
 import './clientPage.css'
 import NewsIdPage from '../newsIdPage/NewsIdPage';
+import GatesIdPage from '../gatesIdPage/GatesIdPage';
 
 const ClientPage = () => {
 
@@ -41,6 +42,7 @@ const ClientPage = () => {
             <Routes>
                 <Route path='/' element={<HomePage />} />
                 <Route path='gates' element={<GatesPage />} />
+                <Route path='gates/:id' element={<GatesIdPage />} />
                 <Route path='news' element={<NewsPage />} />
                 <Route path='news/:id' element={<NewsIdPage />} />
                 <Route path='works' element={<WorksPage />} />

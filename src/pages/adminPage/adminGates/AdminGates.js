@@ -30,7 +30,7 @@ const AdminGates = () => {
             data.append('file', link)
             dispatch(createPostGates(data))
             navigate('/admin')
-            toast('Новость сохранена')
+            toast('Данные сохранены')
         }
     }
 
@@ -75,7 +75,7 @@ const AdminGates = () => {
                 value={description}
                 placeholder='Текст' 
                 onChange={(e) => setDescription(e.target.value)}
-                maxlength="500"
+                maxlength="800"
                 />
             </label>
             

@@ -43,12 +43,12 @@ const Navbar = () => {
                     <NavLink to='gates' className='nav_link'>Услуги</NavLink>
                     <NavLink to='news' className='nav_link'>Новости</NavLink>
                     <NavLink to='works' className='nav_link'>Наши работы</NavLink>
+                </ul>
+
                     <div className='nav_link_contacts'>
                         <Link className='nav_link' style={{fontSize: '15px'}} to="map" spy={true} smooth={true} offset={50} duration={500} onClick={handleMenu}><CiLocationOn/>&thinsp;г. Бишкек</Link>
                         <NavLink className='nav_link' style={{fontSize: '15px'}} to="tel:+996552570755"><CiPhone/>&thinsp;+996 (552) 57 07 55</NavLink>
                     </div>
-                </ul>
-
                 {isOpen ? <div className='nav_toggle open'onClick={handleMenu}>
                     <div className="bar"></div>
                 </div> : <div className='nav_toggle'onClick={handleMenu}>

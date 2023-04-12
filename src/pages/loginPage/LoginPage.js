@@ -14,10 +14,7 @@ const LoginPage = () => {
     const {status} = useSelector((state) => state.auth)
     const isAuth = useSelector(checkIsAuth)
     const dispatch = useDispatch()
-    const navigate = useNavigate()
-
-    console.log(status)
-    
+    const navigate = useNavigate()    
 
     useEffect(() => {
         if(isAuth) navigate('/admin')

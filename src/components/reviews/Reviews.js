@@ -44,18 +44,18 @@ const Reviews = ({review = [], amount}) => {
             transitionDuration={500}
             removeArrowOnDeviceType={["tablet", "mobile"]}
             >
-                {list.map(item => (
+                {list.map(({link, name, gates, text}) => (
                     <div className={styles.reviews_item}>
                         <div className={styles.reviews_item_top}>
                             <div className={styles.reviews_item_avatar}>
-                                <img src={item.link} alt="author" />
+                                <img src={`http://161.35.29.179:8085/image/${link}`} alt="author" />
                             </div>
                             <div className={styles.reviews_item_title}>
-                                <h3 className={styles.reviews_author}>{item.name}</h3>
-                                <h4 className={styles.reviews_product}>{item.gates.header}</h4>
+                                <h3 className={styles.reviews_author}>{name}</h3>
+                                <h4 className={styles.reviews_product}>{gates.header}</h4>
                             </div>
                         </div> 
-                        <p className={styles.reviews_desc}>{item.text}</p>
+                        <p className={styles.reviews_desc}>{text}</p>
                     </div>
                 ))}
             </Carousel>

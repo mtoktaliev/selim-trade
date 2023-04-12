@@ -30,9 +30,9 @@ export const getAllNews = createAsyncThunk('post/getAllNews', async () => {
     }
 })
 
-export const removeNews = createAsyncThunk('news/removeNews', async(id) => {
+export const removeNews = createAsyncThunk('post/removeNews', async(id) => {
     try {
-        const {data} = await instance.delete(`/admin/news/delete/${id}`, id)
+        const {data} = await instance.delete(`/admin/news/delete/?id=${id}`, id)
         return data
     } catch (error) {
         console.log(error)
@@ -73,7 +73,7 @@ export const postNewsSlice = createSlice({
         builder.addCase(removeNews.fulfilled, (state, action) => {
             state.loading = false
             state.postNews = state.postNews.filter(
-                (news) => news._id !== action.payload._id,
+                (postNews) => postNews._id !== action.payload._id,
             )
         });
         builder.addCase(removeNews.rejected, (state) => {

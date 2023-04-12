@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './SimilarNews.module.css'
 import H2 from '../h2/H2';
+import { Link } from "react-router-dom";
 
 const SimilarNews = ({news =[], amount}) => {
     const list = news.filter((_, i) => i < amount);
@@ -13,6 +14,9 @@ const SimilarNews = ({news =[], amount}) => {
                             <div className={styles.item} style={{ backgroundImage: `url(http://161.35.29.179:8085/image/${main_photo})`}}>
                             <div className={styles.item_title}>{header}</div>
                             <div className={styles.item_desc}>{description.slice(0, 100)}</div>
+                            <Link to={`/news/${id}`} key={id} className={styles.item_btn}>
+                                УЗНАТЬ БОЛЬШЕ
+                            </Link>
                             </div>
                         ))}
                     </div>

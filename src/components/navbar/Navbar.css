@@ -113,8 +113,7 @@
     }
 
     .nav_link_contacts {
-        align-items: center;
-        row-gap: 10px;
+        display: none;
     }
 
     .nav_list.open {

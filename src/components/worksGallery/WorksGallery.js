@@ -13,7 +13,7 @@ const WorksGallery = ({worksGallery =[], amount}) => {
                 <div className="worksGallery_inner">
                     {list.map(({id, link}) => (
                         <div className="worksGallery_img">
-                            <img src={link} alt={id} key={id}/>
+                            <img src={`http://161.35.29.179:8085/image/${link}`} alt={id} key={id}/>
                         </div>
                     ))}
                 </div>

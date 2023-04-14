@@ -43,6 +43,17 @@
     line-height: 140%;
 }
 
+.element-animation {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.element-animation.element-show {
+    opacity: 1;
+    transition: all 1s;
+    transform: translateY(0%);
+}
+
 @media (max-width: 1200px) {
 
     .service_desc {

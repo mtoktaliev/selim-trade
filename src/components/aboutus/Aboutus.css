@@ -8,6 +8,7 @@
     z-index: -2;
     display: flex;
     align-items: center;
+    transition: all 0.5 ease-in;
 }
 
 .aboutus_container {
@@ -36,6 +37,17 @@
 
 .aboutus_text p:last-child {
     margin-bottom: 0;
+}
+
+.element-animation {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.element-animation.element-show {
+    opacity: 1;
+    transition: all 1s;
+    transform: translateY(0%);
 }
 
 @media (max-width: 992px) {

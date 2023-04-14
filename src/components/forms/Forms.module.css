@@ -22,7 +22,6 @@
     padding: 15px;
     border-radius: var(--L-border-radius);
     font-size: 20px;
-    text-transform: lowercase;
 }
 
 .forms textarea {
@@ -34,7 +33,6 @@
     padding: 15px;
     border-radius: var(--L-border-radius);
     font-size: 20px;
-    text-transform: lowercase;
 }
 
 .mobile_holder {

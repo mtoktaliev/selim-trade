@@ -41,7 +41,7 @@ const AdminGates = () => {
 
     return (
         <>
-        <H2 data='Добавьте ворота' />
+        <H2 data='Ворота' />
         <form
         className={styles.container}
         onSubmit={(e) => e.preventDefault()}

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import H2 from '../../../components/h2/H2';
 import styles from './AdminReviews.module.css'
 import { getGatesTypes } from '../../../functions/gatesTypes/gatesTypesSlice';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { createPostReview } from '../../../functions/postReview/postReviewSlice';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
@@ -13,7 +13,7 @@ const AdminReviews = () => {
     const [name, setName] = useState('')
     const [text, setText] = useState('')
     const [file, setFile] = useState('')
-    const [gatesId, setGatesId] = useState('')
+    // const [gatesId, setGatesId] = useState('')
     
     const dispatch = useDispatch();
     const navigate = useNavigate()
@@ -22,7 +22,7 @@ const AdminReviews = () => {
         dispatch(getGatesTypes())
     }, [dispatch])
    
-    const { gatesTypes } = useSelector((state) => state);
+    // const { gatesTypes } = useSelector((state) => state);
 
     const submitHandler = () => {
         if (!name ) {
@@ -31,14 +31,12 @@ const AdminReviews = () => {
             alert("Введите текст")
         } else if (!file) {
             alert("Загрузите фото обложки")
-        } else if (!gatesId) {
-            alert("Выберите ворота")
-        } else {
+        }  else {
             const data = new FormData()
             data.append('name', name)
             data.append('text', text)
             data.append('file', file)
-            data.append('gates', gatesId)
+            // data.append('gates', gatesId)
             dispatch(createPostReview(data))
             navigate('/admin')
             toast('Новость сохранена')
@@ -83,11 +81,11 @@ const AdminReviews = () => {
             </label>
             
             <label>Ворота</label>
-            <select onChange={(e) => setGatesId(e.target.value)} className={styles.select}>
+            {/* <select onChange={(e) => setGatesId(e.target.value)} className={styles.select}>
                 {gatesTypes.list.map((item) =>{
                     return <option>{item.header}</option>
                 })}
-            </select>
+            </select> */}
             <label className={styles.imgLabel}>
                 Прикрепить изображение
                 <input 

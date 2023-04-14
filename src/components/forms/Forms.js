@@ -45,17 +45,17 @@ const Forms = () => {
                             <input 
                             type="text" 
                             name='name' 
-                            placeholder='ИМЯ' 
+                            placeholder='Имя' 
                             onChange={e => setName(e.target.value)}
                             />
                             <input 
                             type="tel" 
                             name='phone' 
-                            placeholder='телефон' 
+                            placeholder='Телефон' 
                             onChange={e => setContact(e.target.value)}
                             />
                             <textarea 
-                            placeholder='СООБЩЕНИЕ' 
+                            placeholder='Сообщение' 
                             className={styles.mobile_holder}
                             onChange={(e) => setMessage(e.target.value)}
                             />
@@ -63,7 +63,7 @@ const Forms = () => {
                             
                         </div>
                         <textarea 
-                        placeholder='СООБЩЕНИЕ' 
+                        placeholder='Сообщение' 
                         className={styles.desktop_holder}
                         onChange={(e) => setMessage(e.target.value)}
                         />

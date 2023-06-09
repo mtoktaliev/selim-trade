@@ -11,6 +11,7 @@ import WorksSlider from '../../components/worksSlider/WorksSlider';
 const HomePage = () => {
 
     const { news, gatesTypes, review } = useSelector((state) => state);
+    console.log(news)
 
     return (
         <>

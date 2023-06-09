@@ -30,13 +30,12 @@
     position: absolute;
     overflow: hidden;
     transform: translateY(-30%);
-    background: var(--blue-gradient);
+    background-size: cover;
+    background-position: center;
 }
 
 .reviews_item_avatar img {
-    background-position: center;
-    background-size: cover;
-    height: 100%;
+    width: 100%;
 }
 
 .reviews_item_title {
